@@ -1,0 +1,38 @@
+[
+	{
+		"id": "yagoda-karpat",
+		"name": "Ягода Карпат",
+		"img": "/images/yagoda-karpat-ss-v4.png",
+		"siteUrl": "https://yagodakarpat.com/"
+	},
+	{
+		"id": "stepan-dordiai",
+		"name": "STEPAN DORDIAI",
+		"img": "/images/stepan-dordiai-screenshot.png",
+		"siteUrl": "https://stepandordiai.netlify.app/"
+	},
+	{
+		"id": "neresen",
+		"name": "Neresen",
+		"img": "/images/neresen-screenshot-v3.png",
+		"siteUrl": "https://neresen.cz/"
+	},
+	{
+		"id": "heeeyooo",
+		"name": "heeeyooo",
+		"img": "/images/heeeyooo-ss.png",
+		"siteUrl": "https://heeeyooo.studio/"
+	},
+	{
+		"id": "fve-stavby",
+		"name": "FVE STAVBY",
+		"img": "/images/fve-stavby-ss.png",
+		"siteUrl": "https://fvestavby.cz/"
+	},
+	{
+		"id": "flovas",
+		"name": "Flovas",
+		"img": "/images/flovas-screenshot-v2.png",
+		"siteUrl": "https://flovas.netlify.app/"
+	}
+]
