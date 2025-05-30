@@ -1,21 +1,28 @@
+import { NavLink } from "react-router-dom";
 import logoImg from "/heeeyooo-studio-logo-black-v1.svg";
 import "./Header.scss";
 
 const Header = () => {
 	return (
-		<header>
+		<header className="header">
 			<div className="header__logo">
 				<img
 					width={40}
 					height={40}
 					className="header__logo-img"
 					src={logoImg}
-					alt=""
+					alt="heeeyooo Logo"
 				/>
-				<a className="header__logo-link" href="">
+				<NavLink className="header__logo-link" to={"/"}>
 					heeeyooo <span>studio</span>
-				</a>
+				</NavLink>
 			</div>
+			<nav className="header__nav">
+				<NavLink className={"header__nav-link"}>Home</NavLink>
+				<NavLink className={"header__nav-link"}>About</NavLink>
+				<NavLink className={"header__nav-link"}>Portfolio</NavLink>
+				<NavLink className={"header__nav-link"}>Contacts</NavLink>
+			</nav>
 		</header>
 	);
 };

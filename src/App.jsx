@@ -1,10 +1,11 @@
-import Header from "./Components/Header/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
 import workData from "./data/work-data.json";
 import "./App.scss";
 
 function App() {
 	return (
-		<>
+		<Router>
 			<Header />
 			<p className="work__title">Work</p>
 			<div className="work">
@@ -22,7 +23,7 @@ function App() {
 					);
 				})}
 			</div>
-		</>
+		</Router>
 	);
 }
 

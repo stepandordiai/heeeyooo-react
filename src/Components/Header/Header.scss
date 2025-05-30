@@ -1,4 +1,4 @@
-header {
+.header {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -6,7 +6,7 @@ header {
 	height: 60px;
 	padding: 10px;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -25,4 +25,18 @@ header {
 	span {
 		font-weight: 300;
 	}
+}
+
+.header__nav {
+	display: flex;
+	gap: 20px;
+}
+
+.header__nav-link {
+	background: rgba(0, 0, 0, 0.1);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	color: black;
+	padding: 2.5px 5px;
+	border-radius: 5px;
 }

@@ -1,0 +1,1 @@
+idea when scroll up menu will show and hide when down
