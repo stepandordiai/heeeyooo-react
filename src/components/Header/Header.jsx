@@ -64,10 +64,18 @@ const Header = () => {
 			</NavLink>
 			<span>Home</span>
 			<nav className="header__nav">
-				<NavLink className={"header__nav-link"}>Home</NavLink>
-				<NavLink className={"header__nav-link"}>About</NavLink>
-				<NavLink className={"header__nav-link"}>Portfolio</NavLink>
-				<NavLink className={"header__nav-link"}>Contacts</NavLink>
+				<NavLink className={"header__nav-link"} to={"/"}>
+					Home
+				</NavLink>
+				<NavLink className={"header__nav-link"} to={"/about"}>
+					About
+				</NavLink>
+				<NavLink className={"header__nav-link"} to={"/portfolio"}>
+					Portfolio
+				</NavLink>
+				<NavLink className={"header__nav-link"} to={"/contacts"}>
+					Contacts
+				</NavLink>
 			</nav>
 			<BurgerBtn />
 		</header>
