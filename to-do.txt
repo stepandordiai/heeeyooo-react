@@ -1,1 +1,3 @@
-idea when scroll up menu will show and hide when down
+add 3 pages
+add menu with 4 navlinks
+add text which will be changing when i navigate in header like home about etc
