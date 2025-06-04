@@ -1,3 +1,17 @@
 a {
-	color: #000;
+	// color: #000;
+	color: #fff;
+}
+
+.contacts__details {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.contacts__details-title {
+	font-size: clamp(1.5rem, 4vw, 3rem) !important;
+	font-weight: 500 !important;
 }

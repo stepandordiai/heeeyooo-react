@@ -2,7 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-import logoImg from "/heeeyooo-studio-logo-black-v1.svg";
+import logoImg from "/heeeyooo-studio-logo-white-v1.svg";
 import "./Header.scss";
 
 const Header = () => {
