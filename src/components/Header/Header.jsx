@@ -66,6 +66,9 @@ const Header = () => {
 		};
 	}, []);
 
+	const inactiveLink = "header__nav-link";
+	const activeLink = "header__nav-link header__nav-link--active";
+
 	return (
 		<header className="header">
 			<div className="header__inner">
@@ -83,16 +86,28 @@ const Header = () => {
 				</NavLink>
 				<span className="header__active-page">{getPageTitle()}</span>
 				<nav className="header__nav">
-					<NavLink className={"header__nav-link"} to={"/"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/"}
+					>
 						Home
 					</NavLink>
-					<NavLink className={"header__nav-link"} to={"/about"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/about"}
+					>
 						About
 					</NavLink>
-					<NavLink className={"header__nav-link"} to={"/portfolio"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/portfolio"}
+					>
 						Portfolio
 					</NavLink>
-					<NavLink className={"header__nav-link"} to={"/contacts"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/contacts"}
+					>
 						Contacts
 					</NavLink>
 				</nav>

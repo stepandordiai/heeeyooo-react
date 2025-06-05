@@ -5,8 +5,9 @@
 	position: fixed;
 	bottom: 10px;
 	left: 50%;
-	width: max-content;
+	z-index: 1000;
 	transform: translateX(-50%);
+	width: max-content;
 	display: flex;
 	flex-direction: column-reverse;
 	background: rgba(0, 0, 0, 0.5);
@@ -53,7 +54,15 @@
 }
 
 .header__nav-link {
+	position: relative;
 	color: #fff;
+	overflow: hidden;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.header__nav-link--active {
+	background: rgba(255, 255, 255, 0.2) !important;
 }
 
 @media screen and (width <= 600px) {
