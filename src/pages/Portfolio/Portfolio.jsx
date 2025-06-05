@@ -78,13 +78,6 @@ const Portfolio = () => {
 						>
 							<img className="work__img" src={project.img} alt="" />
 							<div className="work__details">
-								<img
-									width={24}
-									height={24}
-									className="work__icon"
-									src={project.icon}
-									alt=""
-								/>
 								<p className="work__name">{project.name}</p>
 							</div>
 							{/* <div className="bg-element"></div> */}

@@ -10,10 +10,10 @@
 	width: max-content;
 	display: flex;
 	flex-direction: column-reverse;
-	background: rgba(0, 0, 0, 0.5);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-	border-radius: 25px;
+	background: rgba(255, 255, 255, 0.1);
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	border-radius: 30px;
 	transition: all 0.3s;
 }
 

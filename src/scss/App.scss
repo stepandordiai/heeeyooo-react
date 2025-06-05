@@ -1,6 +1,10 @@
 @use "reset";
 @use "fonts";
 
+html {
+	scrollbar-width: none;
+}
+
 body {
 	font-family: "Chakra Petch", sans-serif;
 	padding: 10px;
