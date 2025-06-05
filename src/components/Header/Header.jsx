@@ -52,17 +52,12 @@ const Header = () => {
 		let prevScroll = 0;
 		function handleHeaderOnScroll() {
 			const scroll = document.documentElement.scrollTop;
-			const scrollHeight = document.documentElement.scrollHeight;
-			if (scroll + window.innerHeight > scrollHeight - 100) {
+			if (scroll > prevScroll) {
 				document.querySelector(".header").classList.add("header--hide");
 			} else {
-				if (scroll > prevScroll && scroll > 100) {
-					document.querySelector(".header").classList.add("header--hide");
-				} else {
-					document.querySelector(".header").classList.remove("header--hide");
-				}
-				prevScroll = scroll;
+				document.querySelector(".header").classList.remove("header--hide");
 			}
+			prevScroll = scroll;
 		}
 		document.addEventListener("scroll", handleHeaderOnScroll);
 
