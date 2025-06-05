@@ -1,8 +1,14 @@
 @use "./../../scss/mixins" as *;
 
-.works {
+.works__list {
 	display: flex;
 	flex-direction: column;
+}
+
+.works__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
 }
 
 .work {
@@ -17,6 +23,12 @@
 	}
 }
 
+.work__grid {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
 .work__img {
 	border-radius: inherit;
 }
@@ -24,6 +36,10 @@
 .work__details {
 	@include flex-start-center;
 	gap: 5px;
+}
+
+.work__details-grid {
+	@include flex-between-center;
 }
 
 .work__icon {
@@ -36,5 +52,17 @@
 
 	&:hover {
 		color: hsl(0, 0%, 50%);
+	}
+}
+
+@media screen and (width <=1000px) {
+	.works__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (width <=600px) {
+	.works__grid {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }
