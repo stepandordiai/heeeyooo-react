@@ -6,44 +6,4 @@ body {
 	padding: 10px;
 	background: #000;
 	color: #fff !important;
-	// min-height: 2000px;
-}
-
-.work__title {
-	font-size: 1.5rem;
-}
-
-.work {
-	display: grid;
-	gap: 20px;
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.work__project-card-link {
-	padding: 10px;
-	background: rgba(0, 0, 0, 0.05);
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-
-	&:hover {
-		background: rgba(0, 0, 0, 0.1);
-	}
-}
-
-.work__project-card-name {
-	color: #000;
-	font-size: 1.25rem;
-}
-
-@media screen and (width <= 896px) {
-	.work {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
-@media screen and (width <= 600px) {
-	.work {
-		grid-template-columns: repeat(1, 1fr);
-	}
 }

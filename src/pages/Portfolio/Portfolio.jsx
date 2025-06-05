@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import workData from "./../../data/work-data.json";
+import workData from "../../data/work-data.json";
 import "./Portfolio.scss";
 
 const Portfolio = () => {
@@ -9,19 +9,23 @@ const Portfolio = () => {
 				<title>Portfolio | heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/portfolio" />
 			</Helmet>
-			<h1>Portfolio</h1>
-			<div className="work">
+			<h1>All works</h1>
+			<div className="works">
 				{workData.map((project) => {
 					return (
-						<a
-							key={project.id}
-							className="work__project-card-link"
-							href={project.siteUrl}
-							target="_blank"
-						>
-							<img src={project.img} alt="" />
-							<p className="work__project-card-name">{project.name}</p>
-						</a>
+						<div key={project.id} className="work">
+							<img className="work__img" src={project.img} alt="" />
+							<div className="work__details">
+								<img
+									width={24}
+									height={24}
+									className="work__icon"
+									src={project.icon}
+									alt=""
+								/>
+								<p className="work__name">{project.name}</p>
+							</div>
+						</div>
 					);
 				})}
 			</div>
