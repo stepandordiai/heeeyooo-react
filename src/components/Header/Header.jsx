@@ -52,7 +52,14 @@ const Header = () => {
 		let prevScroll = 0;
 		function handleHeaderOnScroll() {
 			const scroll = document.documentElement.scrollTop;
-			if (scroll > prevScroll && scroll > 100) {
+			const scrollHeight = document.documentElement.scrollHeight;
+			console.log(scroll + window.innerHeight);
+			console.log(scrollHeight - 200);
+			if (
+				scroll > prevScroll &&
+				scroll > 100 &&
+				scroll + window.innerHeight < scrollHeight + 100
+			) {
 				document.querySelector(".header").classList.add("header--hide");
 			} else {
 				document.querySelector(".header").classList.remove("header--hide");

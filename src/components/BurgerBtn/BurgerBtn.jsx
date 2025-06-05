@@ -3,11 +3,11 @@ import "./BurgerBtn.scss";
 
 const BurgerBtn = () => {
 	function toggleBurger1() {
-		document.querySelector(".burger-1").classList.toggle("burger-1--active");
 		document.querySelector(".header").classList.toggle("header--active");
 		document
 			.querySelector(".burger-menu")
 			.classList.toggle("burger-menu--active");
+		document.querySelector(".burger-1").classList.toggle("burger-1--active");
 	}
 
 	useEffect(() => {
