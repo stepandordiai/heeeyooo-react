@@ -4,48 +4,54 @@
 		"name": "Ягода Карпат",
 		"img": "/images/yagoda-karpat-ss-v4.png",
 		"icon": "/work-icons/yagoda-karpat-v2.png",
-		"siteUrl": "https://yagodakarpat.com/"
+		"siteUrl": "https://yagodakarpat.com/",
+		"isStarred": true
 	},
 	{
 		"id": "stepan-dordiai",
 		"name": "STEPAN DORDIAI",
 		"img": "/images/stepan-dordiai-screenshot.png",
 		"icon": "/work-icons/stepan-dordiai-v5.png",
-		"siteUrl": "https://stepandordiai.netlify.app/"
+		"siteUrl": "https://stepandordiai.netlify.app/",
+		"isStarred": true
 	},
 	{
 		"id": "neresen",
 		"name": "Neresen",
 		"img": "/images/neresen-screenshot-v3.png",
 		"icon": "/work-icons/neresen-v1.png",
-		"siteUrl": "https://neresen.cz/"
+		"siteUrl": "https://neresen.cz/",
+		"isStarred": true
 	},
 	{
 		"id": "prozubik",
 		"name": "Prozubik",
 		"img": "/images/prozubik-ss-v3-c.png",
 		"icon": "/work-icons/prozubik-v4.png",
-		"siteUrl": "https://heeeyooo.studio/"
+		"siteUrl": "https://prozubik.cz/"
 	},
 	{
 		"id": "fve-stavby",
 		"name": "FVE STAVBY",
 		"img": "/images/fve-stavby-ss.png",
 		"icon": "/work-icons/fve-stavby-v2.png",
-		"siteUrl": "https://fvestavby.cz/"
+		"siteUrl": "https://fvestavby.cz/",
+		"isStarred": true
 	},
 	{
 		"id": "flovas",
 		"name": "Flovas",
 		"img": "/images/flovas-screenshot-v2.png",
 		"icon": "/work-icons/flovas-v2.png",
-		"siteUrl": "https://flovas.netlify.app/"
+		"siteUrl": "https://flovas.netlify.app/",
+		"isStarred": true
 	},
 	{
 		"id": "bourek",
 		"name": "Bourek",
 		"img": "/images/bourek-ss-v3-c.png",
 		"icon": "/work-icons/bourek-v4.png",
-		"siteUrl": "https://bourek.cz/"
+		"siteUrl": "https://bourek.cz/",
+		"isStarred": true
 	}
 ]
