@@ -53,18 +53,16 @@ const Header = () => {
 		function handleHeaderOnScroll() {
 			const scroll = document.documentElement.scrollTop;
 			const scrollHeight = document.documentElement.scrollHeight;
-			console.log(scroll + window.innerHeight);
-			console.log(scrollHeight - 200);
-			if (
-				scroll > prevScroll &&
-				scroll > 100 &&
-				scroll + window.innerHeight < scrollHeight + 100
-			) {
+			if (scroll + window.innerHeight > scrollHeight - 100) {
 				document.querySelector(".header").classList.add("header--hide");
 			} else {
-				document.querySelector(".header").classList.remove("header--hide");
+				if (scroll > prevScroll && scroll > 100) {
+					document.querySelector(".header").classList.add("header--hide");
+				} else {
+					document.querySelector(".header").classList.remove("header--hide");
+				}
+				prevScroll = scroll;
 			}
-			prevScroll = scroll;
 		}
 		document.addEventListener("scroll", handleHeaderOnScroll);
 
