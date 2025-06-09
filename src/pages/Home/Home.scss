@@ -1,3 +1,9 @@
+@use "./../../scss/mixins" as *;
+.home {
+	height: 100svh;
+	@include flex-center;
+}
+
 h1 {
 	font-size: clamp(1.5rem, 4vw, 3rem) !important;
 }

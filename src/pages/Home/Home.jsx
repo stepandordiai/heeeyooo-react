@@ -66,7 +66,9 @@ const Home = () => {
 				<title>heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/" />
 			</Helmet>
-			<h1>heeeyooo studio</h1>
+			<div className="home">
+				<h1>Creative web studio</h1>
+			</div>
 			<h2>Work</h2>
 			<div className="home__works">
 				{workData
@@ -89,7 +91,7 @@ const Home = () => {
 										alt=""
 									/>
 									<p className="home__work-name">{project.name}</p>
-									<p className="home__work-date">April | 2025</p>
+									<p className="home__work-date">{project.date}</p>
 								</div>
 							</a>
 						);
