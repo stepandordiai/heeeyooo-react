@@ -1,7 +1,7 @@
 @use "./../../scss/mixins" as *;
 
 .header {
-	min-height: 60px;
+	min-height: 50px;
 	position: fixed;
 	bottom: 10px;
 	left: 50%;
@@ -10,7 +10,7 @@
 	width: max-content;
 	display: flex;
 	flex-direction: column-reverse;
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(0, 0, 0, 0.5);
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 	border-radius: 30px;
@@ -22,8 +22,8 @@
 }
 
 .header__inner {
-	min-height: 60px;
-	padding: 10px;
+	min-height: 50px;
+	padding: 5px 5px 5px 10px;
 	@include flex-between-center;
 	gap: 20px;
 }

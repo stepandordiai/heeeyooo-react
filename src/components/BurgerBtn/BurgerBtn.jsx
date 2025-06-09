@@ -21,9 +21,9 @@ const BurgerBtn = () => {
 	}, []);
 
 	return (
-		<>
-			<div onClick={toggleBurger1} className="burger-1"></div>
-		</>
+		<div onClick={toggleBurger1} className="burger-btn__container">
+			<div className="burger-1"></div>
+		</div>
 	);
 };
 
