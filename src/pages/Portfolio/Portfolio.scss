@@ -1,5 +1,24 @@
 @use "./../../scss/mixins" as *;
 
+.portfolio__btn-container {
+	@include flex-start-center;
+	gap: 5px;
+	background: rgba(255, 255, 255, 0.1);
+	width: max-content;
+	border-radius: 5px;
+	padding: 5px;
+
+	button {
+		padding: 5px;
+		border-radius: inherit;
+	}
+}
+
+.portfolio__btn--active {
+	background: var(--accent-clr) !important;
+	color: black !important;
+}
+
 .works__list {
 	display: flex;
 	flex-direction: column;
@@ -29,8 +48,8 @@
 	gap: 10px;
 }
 
-.work__img {
-	border-radius: inherit;
+.portfolio__img {
+	border-radius: 10px;
 }
 
 .work__details {

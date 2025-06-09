@@ -1,3 +1,1 @@
-update layout btns with active btn and styles
-update portfolio grid projects with border radius
 update contacts with form with border bottom when active get thick

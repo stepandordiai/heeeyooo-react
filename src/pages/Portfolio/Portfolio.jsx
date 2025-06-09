@@ -18,8 +18,20 @@ const Portfolio = () => {
 				<link rel="canonical" href="https://heeeyooo.studio/portfolio" />
 			</Helmet>
 			<h1>All works</h1>
-			<button onClick={() => handleLayout("works__list")}>List</button>
-			<button onClick={() => handleLayout("works__grid")}>Grid</button>
+			<div className="portfolio__btn-container">
+				<button
+					className={layout === "works__list" && "portfolio__btn--active"}
+					onClick={() => handleLayout("works__list")}
+				>
+					List
+				</button>
+				<button
+					className={layout === "works__grid" && "portfolio__btn--active"}
+					onClick={() => handleLayout("works__grid")}
+				>
+					Grid
+				</button>
+			</div>
 			{layout === "works__list" && (
 				<div className={layout}>
 					{workData.map((project) => {
@@ -47,7 +59,7 @@ const Portfolio = () => {
 								href={project.siteUrl}
 								target="_blank"
 							>
-								<img src={project.img} alt="" />
+								<img className="portfolio__img" src={project.img} alt="" />
 								<div className="work__details-grid">
 									<p className="work__name">{project.name}</p>
 									<img width={20} height={20} src={arrowIcon} alt="" />
