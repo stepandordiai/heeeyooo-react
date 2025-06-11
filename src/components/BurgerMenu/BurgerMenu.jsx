@@ -12,20 +12,35 @@ const BurgerMenu = () => {
 		}),
 	]);
 
+	const inactiveLink = "burger-menu__nav-link";
+	const activeLink = "burger-menu__nav-link burger-menu__nav-link--active";
+
 	return (
 		<>
 			<div className="burger-menu">
 				<div className="burger-menu__nav">
-					<NavLink className={"burger-menu__nav-link"} to={"/"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/"}
+					>
 						Home
 					</NavLink>
-					<NavLink className={"burger-menu__nav-link"} to={"/about"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/about"}
+					>
 						About
 					</NavLink>
-					<NavLink className={"burger-menu__nav-link"} to={"/portfolio"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/portfolio"}
+					>
 						Portfolio
 					</NavLink>
-					<NavLink className={"burger-menu__nav-link"} to={"/contacts"}>
+					<NavLink
+						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
+						to={"/contacts"}
+					>
 						Contacts
 					</NavLink>
 				</div>
