@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import About from "./pages/About/About";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Contacts from "./pages/Contacts/Contacts";
+import Footer from "./components/Footer/Footer";
 import "./scss/App.scss";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 				<Route path="/portfolio" element={<Portfolio />} />
 				<Route path="/contacts" element={<Contacts />} />
 			</Routes>
+			<Footer />
 		</Router>
 	);
 }

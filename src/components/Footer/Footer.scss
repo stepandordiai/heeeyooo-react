@@ -1,0 +1,31 @@
+@use "./../../scss/mixins" as *;
+
+.footer {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.footer-top {
+	display: flex;
+	gap: 20px;
+}
+
+.footer-bottom {
+	text-align: center;
+	color: hsl(0, 0%, 50%);
+}
+
+.footer__nav {
+	@include flex-start;
+	flex-direction: column;
+}
+
+.footer__nav-link {
+	color: hsl(0, 0%, 50%);
+
+	&:hover {
+		color: hsl(0, 0%, 100%);
+	}
+}
