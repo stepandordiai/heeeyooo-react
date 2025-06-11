@@ -74,8 +74,8 @@ const Header = () => {
 			<div className="header__inner">
 				<NavLink className="header__logo-link" to={"/"}>
 					<img
-						width={40}
-						height={40}
+						width={35}
+						height={35}
 						className="header__logo-img"
 						src={logoImg}
 						alt="heeeyooo Logo"

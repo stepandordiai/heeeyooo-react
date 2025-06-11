@@ -1,1 +1,2 @@
 update menu with active state and styles
+add footer
