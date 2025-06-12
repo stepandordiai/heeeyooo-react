@@ -3,6 +3,8 @@ import workData from "../../data/work-data.json";
 import arrowIcon from "/icons/arrow-upper-right.png";
 import "./Portfolio.scss";
 import { useEffect, useState } from "react";
+import gridIcon from "/icons/grid.svg";
+import listIcon from "/icons/line.svg";
 
 const Portfolio = () => {
 	const [layout, setLayout] = useState("works__list");
@@ -23,13 +25,15 @@ const Portfolio = () => {
 					className={layout === "works__list" && "portfolio__btn--active"}
 					onClick={() => handleLayout("works__list")}
 				>
-					List
+					<span>List</span>
+					<img width={15} src={listIcon} alt="" />
 				</button>
 				<button
 					className={layout === "works__grid" && "portfolio__btn--active"}
 					onClick={() => handleLayout("works__grid")}
 				>
-					Grid
+					<span>Grid</span>
+					<img className="grid-icon" width={15} src={gridIcon} alt="" />
 				</button>
 			</div>
 			{layout === "works__list" && (

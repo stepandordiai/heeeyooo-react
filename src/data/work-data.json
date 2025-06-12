@@ -5,8 +5,7 @@
 		"date": "April | 2025",
 		"img": "/portfolio-ss/flovas-screenshot-v2.png",
 		"icon": "/work-icons/flovas-v2.png",
-		"siteUrl": "https://flovas.netlify.app/",
-		"isStarred": true
+		"siteUrl": "https://flovas.netlify.app/"
 	},
 	{
 		"id": "fve-stavby",
@@ -14,8 +13,7 @@
 		"date": "March | 2025",
 		"img": "/portfolio-ss/fve-stavby-ss.png",
 		"icon": "/work-icons/fve-stavby-v2.png",
-		"siteUrl": "https://fvestavby.cz/",
-		"isStarred": true
+		"siteUrl": "https://fvestavby.cz/"
 	},
 	{
 		"id": "bourek",
@@ -23,8 +21,7 @@
 		"date": "January | 2025",
 		"img": "/portfolio-ss/bourek-ss-v3-c.png",
 		"icon": "/work-icons/bourek-v4.png",
-		"siteUrl": "https://bourek.cz/",
-		"isStarred": true
+		"siteUrl": "https://bourek.cz/"
 	},
 	{
 		"id": "neresen",
@@ -32,8 +29,7 @@
 		"date": "February | 2025",
 		"img": "/portfolio-ss/neresen-screenshot-v3.png",
 		"icon": "/work-icons/neresen-v1.png",
-		"siteUrl": "https://neresen.cz/",
-		"isStarred": true
+		"siteUrl": "https://neresen.cz/"
 	},
 	{
 		"id": "prozubik",
@@ -57,8 +53,7 @@
 		"date": "January | 2025",
 		"img": "/portfolio-ss/yagoda-karpat-ss-v4.png",
 		"icon": "/work-icons/yagoda-karpat-v2.png",
-		"siteUrl": "https://yagodakarpat.com/",
-		"isStarred": true
+		"siteUrl": "https://yagodakarpat.com/"
 	},
 	{
 		"id": "tasty-burger",
@@ -90,7 +85,6 @@
 		"date": "October | 2024",
 		"img": "/portfolio-ss/stepan-dordiai-screenshot.png",
 		"icon": "/work-icons/stepan-dordiai-v5.png",
-		"siteUrl": "https://stepandordiai.netlify.app/",
-		"isStarred": true
+		"siteUrl": "https://stepandordiai.netlify.app/"
 	}
 ]

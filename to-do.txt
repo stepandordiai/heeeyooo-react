@@ -1,0 +1,2 @@
+need to get svg icons for contacts to change on hover
+add custom map dark

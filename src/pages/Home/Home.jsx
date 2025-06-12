@@ -50,12 +50,10 @@ const Home = () => {
 			});
 
 			creatorLink.addEventListener("mouseleave", () => {
-				// const bgElement = document.querySelector(".bg-element");
 				bgElement.classList.remove("bg-element--active");
 			});
 
 			creatorLink.addEventListener("touchend", () => {
-				// const bgElement = document.querySelector(".bg-element");
 				bgElement.classList.remove("bg-element--active");
 			});
 		});
@@ -69,33 +67,52 @@ const Home = () => {
 			<div className="home">
 				<h1>Creative web studio</h1>
 			</div>
-			<h2>Work</h2>
+			<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
+				Recent work
+			</h2>
 			<div className="home__works">
-				{workData
-					.filter((project) => project.isStarred)
-					.map((project) => {
-						return (
-							<a
-								key={project.id}
-								className="home__work rect-animate"
-								href={project.siteUrl}
-								target="_blank"
-							>
-								<img className="home__work-img" src={project.img} alt="" />
-								<div className="home__work-details">
-									<img
-										className="home__work-icon"
-										width={24}
-										height={24}
-										src={project.icon}
-										alt=""
-									/>
-									<p className="home__work-name">{project.name}</p>
-									<p className="home__work-date">{project.date}</p>
-								</div>
-							</a>
-						);
-					})}
+				{workData.slice(0, 6).map((project) => {
+					return (
+						<a
+							key={project.id}
+							className="home__work rect-animate"
+							href={project.siteUrl}
+							target="_blank"
+						>
+							<img className="home__work-img" src={project.img} alt="" />
+							<div className="home__work-details">
+								<p className="home__work-name">{project.name}</p>
+								<p className="home__work-date">{project.date}</p>
+							</div>
+						</a>
+					);
+				})}
+			</div>
+			<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
+				Services
+			</h2>
+			<div className="home__services-grid">
+				<div className="home__service">
+					<p>Strategy</p>
+				</div>
+				<div className="home__service">
+					<p>Design</p>
+				</div>
+				<div className="home__service">
+					<p>Hosting</p>
+				</div>
+				<div className="home__service">
+					<p>Development</p>
+				</div>
+				<div className="home__service">
+					<p>Website Maintenance</p>
+				</div>
+				<div className="home__service">
+					<p>SEO</p>
+				</div>
+			</div>
+			<div className="scroll-line">
+				<div className="scroll-line-inner"></div>
 			</div>
 		</>
 	);

@@ -7,10 +7,15 @@
 	width: max-content;
 	border-radius: 5px;
 	padding: 5px;
+	margin: 20px 0;
 
 	button {
 		padding: 5px;
 		border-radius: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
 	}
 }
 
@@ -46,6 +51,9 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	background: rgba(255, 255, 255, 0.2);
+	padding: 10px;
+	border-radius: 15px;
 }
 
 .portfolio__img {
