@@ -1,20 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://heeeyooo.studio/</loc>
-	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://heeeyooo.studio/about</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://heeeyooo.studio/portfolio</loc>
-	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://heeeyooo.studio/contacts</loc>
-	<priority>0.8</priority>
 </url>
 </urlset>
