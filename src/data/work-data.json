@@ -1,27 +1,36 @@
 [
 	{
-		"id": "yagoda-karpat",
-		"name": "Yagoda Karpat",
-		"date": "January | 2025",
-		"img": "/images/yagoda-karpat-ss-v4.png",
-		"icon": "/work-icons/yagoda-karpat-v2.png",
-		"siteUrl": "https://yagodakarpat.com/",
+		"id": "flovas",
+		"name": "Flovas",
+		"date": "April | 2025",
+		"img": "/portfolio-ss/flovas-screenshot-v2.png",
+		"icon": "/work-icons/flovas-v2.png",
+		"siteUrl": "https://flovas.netlify.app/",
 		"isStarred": true
 	},
 	{
-		"id": "stepan-dordiai",
-		"name": "STEPAN DORDIAI",
-		"date": "October | 2024",
-		"img": "/images/stepan-dordiai-screenshot.png",
-		"icon": "/work-icons/stepan-dordiai-v5.png",
-		"siteUrl": "https://stepandordiai.netlify.app/",
+		"id": "fve-stavby",
+		"name": "FVE STAVBY",
+		"date": "March | 2025",
+		"img": "/portfolio-ss/fve-stavby-ss.png",
+		"icon": "/work-icons/fve-stavby-v2.png",
+		"siteUrl": "https://fvestavby.cz/",
+		"isStarred": true
+	},
+	{
+		"id": "bourek",
+		"name": "Bourek",
+		"date": "January | 2025",
+		"img": "/portfolio-ss/bourek-ss-v3-c.png",
+		"icon": "/work-icons/bourek-v4.png",
+		"siteUrl": "https://bourek.cz/",
 		"isStarred": true
 	},
 	{
 		"id": "neresen",
 		"name": "Neresen",
 		"date": "February | 2025",
-		"img": "/images/neresen-screenshot-v3.png",
+		"img": "/portfolio-ss/neresen-screenshot-v3.png",
 		"icon": "/work-icons/neresen-v1.png",
 		"siteUrl": "https://neresen.cz/",
 		"isStarred": true
@@ -30,35 +39,58 @@
 		"id": "prozubik",
 		"name": "Prozubik",
 		"date": "January | 2025",
-		"img": "/images/prozubik-ss-v3-c.png",
+		"img": "/portfolio-ss/prozubik-ss-v3-c.png",
 		"icon": "/work-icons/prozubik-v4.png",
 		"siteUrl": "https://prozubik.cz/"
 	},
 	{
-		"id": "fve-stavby",
-		"name": "FVE STAVBY",
-		"date": "March | 2025",
-		"img": "/images/fve-stavby-ss.png",
-		"icon": "/work-icons/fve-stavby-v2.png",
-		"siteUrl": "https://fvestavby.cz/",
-		"isStarred": true
-	},
-	{
-		"id": "flovas",
-		"name": "Flovas",
+		"id": "heeeyooo",
+		"name": "heeeyooo",
 		"date": "April | 2025",
-		"img": "/images/flovas-screenshot-v2.png",
-		"icon": "/work-icons/flovas-v2.png",
-		"siteUrl": "https://flovas.netlify.app/",
+		"img": "/portfolio-ss/heeeyooo-ss-v2-c.png",
+		"icon": "/work-icons/bourek-v4.png",
+		"siteUrl": "https://heeeyooo.studio/"
+	},
+	{
+		"id": "yagoda-karpat",
+		"name": "Yagoda Karpat",
+		"date": "January | 2025",
+		"img": "/portfolio-ss/yagoda-karpat-ss-v4.png",
+		"icon": "/work-icons/yagoda-karpat-v2.png",
+		"siteUrl": "https://yagodakarpat.com/",
 		"isStarred": true
 	},
 	{
-		"id": "bourek",
-		"name": "Bourek",
-		"date": "January | 2025",
-		"img": "/images/bourek-ss-v3-c.png",
+		"id": "tasty-burger",
+		"name": "Tasty Burger",
+		"date": "October | 2024",
+		"img": "/portfolio-ss/Screenshot (81).png",
 		"icon": "/work-icons/bourek-v4.png",
-		"siteUrl": "https://bourek.cz/",
+		"siteUrl": "https://stepandordiai.github.io/tasty-burger/"
+	},
+	{
+		"id": "penguin",
+		"name": "penguin",
+		"date": "September | 2024",
+		"img": "/portfolio-ss/Screenshot (79).png",
+		"icon": "/work-icons/bourek-v4.png",
+		"siteUrl": "https://penguin-project.netlify.app/"
+	},
+	{
+		"id": "cloud",
+		"name": "cloud.",
+		"date": "September | 2024",
+		"img": "/portfolio-ss/Screenshot (76).png",
+		"icon": "/work-icons/bourek-v4.png",
+		"siteUrl": "https://cloud-project.netlify.app/"
+	},
+	{
+		"id": "stepan-dordiai",
+		"name": "STEPAN DORDIAI",
+		"date": "October | 2024",
+		"img": "/portfolio-ss/stepan-dordiai-screenshot.png",
+		"icon": "/work-icons/stepan-dordiai-v5.png",
+		"siteUrl": "https://stepandordiai.netlify.app/",
 		"isStarred": true
 	}
 ]
