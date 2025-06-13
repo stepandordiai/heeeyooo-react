@@ -58,6 +58,40 @@ const Home = () => {
 			});
 		});
 	});
+
+	useEffect(() => {
+		document.addEventListener("scroll", () => {
+			const scrollTop = document.documentElement.scrollTop;
+			const documentHeight = document.documentElement.scrollHeight;
+			const windowHeight = document.documentElement.clientHeight;
+			const calcHeight = documentHeight - windowHeight;
+
+			const percentagePos = Math.round((scrollTop * 100) / calcHeight);
+
+			console.log(percentagePos);
+
+			if (scrollTop > windowHeight) {
+				document
+					.querySelector(".scroll-line")
+					.classList.add("scroll-line--active");
+			} else {
+				document
+					.querySelector(".scroll-line")
+					.classList.remove("scroll-line--active");
+			}
+
+			document.querySelector(
+				".scroll-line-inner"
+			).style.height = `${percentagePos}%`;
+		});
+	}, []);
+
+	function handleScrollToTop() {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	}
 	return (
 		<>
 			<Helmet>
@@ -65,7 +99,16 @@ const Home = () => {
 				<link rel="canonical" href="https://heeeyooo.studio/" />
 			</Helmet>
 			<div className="home">
-				<h1>Creative web studio</h1>
+				<h1 className="home__title">Creative web studio</h1>
+				<h1 style={{ color: "hsl(0,0%,50%)" }}>
+					Digital and Graphic Design Studio
+					<br />
+					based in Copenhagen.
+					<br />
+					Crafting Visual Personalities
+					<br />
+					and Digital Experiences.
+				</h1>
 			</div>
 			<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
 				Recent work
@@ -111,7 +154,7 @@ const Home = () => {
 					<p>SEO</p>
 				</div>
 			</div>
-			<div className="scroll-line">
+			<div onClick={handleScrollToTop} className="scroll-line">
 				<div className="scroll-line-inner"></div>
 			</div>
 		</>
