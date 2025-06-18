@@ -113,6 +113,11 @@ const Home = () => {
 			<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
 				Recent work
 			</h2>
+			<p>
+				A selection of past and ongoing projects. Some wer built for clients,
+				others for ourselves - from early experiments to full-scale systems, our
+				work spans disciplines and formats.
+			</p>
 			<div className="home__works">
 				{workData.slice(0, 6).map((project) => {
 					return (
@@ -134,6 +139,10 @@ const Home = () => {
 			<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
 				Services
 			</h2>
+			<p>
+				We specialize in crafting websites from idea, through design to
+				development and post-deployment follow-up support.
+			</p>
 			<div className="home__services-grid">
 				<div className="home__service">
 					<p>Strategy</p>
