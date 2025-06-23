@@ -13,6 +13,48 @@ const Portfolio = () => {
 		setLayout(props);
 	}
 
+	useEffect(() => {
+		const work = document.querySelectorAll(".work");
+		let element = null;
+
+		work.forEach((project, index) => {
+			project.addEventListener("mousemove", (e) => {
+				const projectRect = project.getBoundingClientRect();
+
+				// Check if the element already exists
+				if (!element) {
+					// Create the img element on the first mousemove event
+					element = document.createElement("img");
+					element.classList.add("img-element");
+					project.appendChild(element);
+					element.src = workData[index].img;
+				}
+
+				// Update the image src only if the index changes or it's a new element
+				if (element && element.src !== workData[index].img) {
+					element.src = workData[index].img;
+				}
+
+				// Calculate mouse position relative to the project element
+				let mouseX = e.clientX - projectRect.left;
+				let mouseY = e.clientY - projectRect.top;
+
+				// Move the element based on the mouse position
+				if (element) {
+					element.style.top = mouseY + "px";
+					element.style.left = mouseX + "px";
+				}
+			});
+
+			project.addEventListener("mouseleave", () => {
+				if (element) {
+					element.remove();
+					element = null; // Reset element
+				}
+			});
+		});
+	});
+
 	return (
 		<>
 			<Helmet>
@@ -46,7 +88,16 @@ const Portfolio = () => {
 								href={project.siteUrl}
 								target="_blank"
 							>
-								<p className="work__name">{project.name}</p>
+								<div className="work__desc">
+									<p className="work__name">{project.name}</p>
+									<p
+										className="work__date"
+										style={{ fontWeight: 300, color: "rgba(255,255,255,0.5" }}
+									>
+										{project.date}
+									</p>
+									<p>Design & Development</p>
+								</div>
 								<img width={20} height={20} src={arrowIcon} alt="" />
 							</a>
 						);

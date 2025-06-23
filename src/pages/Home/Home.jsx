@@ -68,8 +68,6 @@ const Home = () => {
 
 			const percentagePos = Math.round((scrollTop * 100) / calcHeight);
 
-			console.log(percentagePos);
-
 			if (scrollTop > windowHeight) {
 				document
 					.querySelector(".scroll-line")

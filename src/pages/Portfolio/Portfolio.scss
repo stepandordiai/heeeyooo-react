@@ -36,6 +36,7 @@
 }
 
 .work {
+	position: relative;
 	@include flex-between-center;
 	padding: 20px 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -82,9 +83,36 @@
 	}
 }
 
+.work__desc {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 100px;
+}
+
+.work__date {
+	justify-self: flex-start;
+}
+
+.img-element {
+	position: absolute;
+	z-index: 100;
+	width: 400px;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	padding: 10px;
+	border-radius: 15px;
+}
+
 @media screen and (width <=1000px) {
 	.works__grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.work__desc {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 0;
 	}
 }
 

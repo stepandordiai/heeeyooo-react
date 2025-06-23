@@ -128,23 +128,18 @@ h1 {
 	background: var(--accent-clr);
 	width: 100%;
 	height: 0%;
-	transition: all 0.2s;
+	transition: all 0.2s ease-out;
 }
 
 .scroll-line::before {
 	content: "Scroll to top";
 	position: absolute;
 	bottom: 10px;
-	// left: 50%;
-	// transform: translateX(-50%);
 	writing-mode: vertical-lr;
-	// writing-mode: vertical-rl;
 	text-orientation: upright;
 	color: black;
 	font-weight: 500;
-	// background: var(--accent-clr);
 	width: 100%;
-	// height: 400px;
 	opacity: 0;
 }
 
