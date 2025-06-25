@@ -11,12 +11,14 @@
 	display: flex;
 	flex-direction: column-reverse;
 	// TODO: 1px or 2px
-	border: 2px solid rgba(255, 255, 255, 0.2);
+	border: 2px solid rgb(50, 50, 50);
 	background: rgba(0, 0, 0, 0.5);
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 	border-radius: 15px;
 	transition: all 0.3s;
+	opacity: 1;
+	pointer-events: all;
 }
 
 .header--active {
@@ -36,6 +38,8 @@
 
 .header--hide {
 	bottom: -60px;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .header__logo-link {
@@ -43,11 +47,6 @@
 	@include flex-center;
 	font-size: 1.5rem;
 	color: #fff;
-	font-weight: 500;
-
-	span {
-		font-weight: 300;
-	}
 }
 
 .header__nav {

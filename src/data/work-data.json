@@ -1,18 +1,23 @@
 [
 	{
+		"id": "max-flow",
+		"name": "MaxFlow",
+		"date": "June | 2025",
+		"img": "/portfolio-ss/max-flow-ss-v1-c.png",
+		"siteUrl": "https://flovas.netlify.app/"
+	},
+	{
 		"id": "flovas",
 		"name": "Flovas",
 		"date": "April | 2025",
 		"img": "/portfolio-ss/flovas-screenshot-v2.png",
-		"icon": "/work-icons/flovas-v2.png",
 		"siteUrl": "https://flovas.netlify.app/"
 	},
 	{
 		"id": "fve-stavby",
 		"name": "FVE STAVBY",
 		"date": "March | 2025",
-		"img": "/portfolio-ss/fve-stavby-ss.png",
-		"icon": "/work-icons/fve-stavby-v2.png",
+		"img": "/portfolio-ss/fve-stavby-ss-v6-c.png",
 		"siteUrl": "https://fvestavby.cz/"
 	},
 	{
@@ -20,7 +25,6 @@
 		"name": "Bourek",
 		"date": "January | 2025",
 		"img": "/portfolio-ss/bourek-ss-v3-c.png",
-		"icon": "/work-icons/bourek-v4.png",
 		"siteUrl": "https://bourek.cz/"
 	},
 	{
@@ -28,7 +32,6 @@
 		"name": "Neresen",
 		"date": "February | 2025",
 		"img": "/portfolio-ss/neresen-screenshot-v3.png",
-		"icon": "/work-icons/neresen-v1.png",
 		"siteUrl": "https://neresen.cz/"
 	},
 	{
@@ -36,23 +39,20 @@
 		"name": "Prozubik",
 		"date": "January | 2025",
 		"img": "/portfolio-ss/prozubik-ss-v3-c.png",
-		"icon": "/work-icons/prozubik-v4.png",
 		"siteUrl": "https://prozubik.cz/"
 	},
 	{
-		"id": "heeeyooo",
-		"name": "heeeyooo",
+		"id": "heeeyooo-studio",
+		"name": "heeeyooo studio",
 		"date": "April | 2025",
 		"img": "/portfolio-ss/heeeyooo-ss-v2-c.png",
-		"icon": "/work-icons/bourek-v4.png",
 		"siteUrl": "https://heeeyooo.studio/"
 	},
 	{
 		"id": "yagoda-karpat",
 		"name": "Yagoda Karpat",
 		"date": "January | 2025",
-		"img": "/portfolio-ss/yagoda-karpat-ss-v4.png",
-		"icon": "/work-icons/yagoda-karpat-v2.png",
+		"img": "/portfolio-ss/yagoda-karpat-ss-v6-c.png",
 		"siteUrl": "https://yagodakarpat.com/"
 	},
 	{
@@ -60,7 +60,6 @@
 		"name": "Tasty Burger",
 		"date": "October | 2024",
 		"img": "/portfolio-ss/Screenshot (81).png",
-		"icon": "/work-icons/bourek-v4.png",
 		"siteUrl": "https://stepandordiai.github.io/tasty-burger/"
 	},
 	{
@@ -68,7 +67,6 @@
 		"name": "penguin",
 		"date": "September | 2024",
 		"img": "/portfolio-ss/Screenshot (79).png",
-		"icon": "/work-icons/bourek-v4.png",
 		"siteUrl": "https://penguin-project.netlify.app/"
 	},
 	{
@@ -76,7 +74,6 @@
 		"name": "cloud.",
 		"date": "September | 2024",
 		"img": "/portfolio-ss/Screenshot (76).png",
-		"icon": "/work-icons/bourek-v4.png",
 		"siteUrl": "https://cloud-project.netlify.app/"
 	},
 	{
@@ -84,7 +81,6 @@
 		"name": "STEPAN DORDIAI",
 		"date": "October | 2024",
 		"img": "/portfolio-ss/stepan-dordiai-screenshot.png",
-		"icon": "/work-icons/stepan-dordiai-v5.png",
 		"siteUrl": "https://stepandordiai.netlify.app/"
 	}
 ]

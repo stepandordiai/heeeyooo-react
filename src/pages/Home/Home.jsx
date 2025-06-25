@@ -66,7 +66,7 @@ const Home = () => {
 			const windowHeight = document.documentElement.clientHeight;
 			const calcHeight = documentHeight - windowHeight;
 
-			const percentagePos = Math.round((scrollTop * 100) / calcHeight);
+			const percentagePos = Math.min((scrollTop * 100) / calcHeight, 100);
 
 			if (scrollTop > windowHeight) {
 				document
@@ -93,12 +93,12 @@ const Home = () => {
 	return (
 		<>
 			<Helmet>
-				<title>heeeyooo studio</title>
+				<title>Creative web studio | heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/" />
 			</Helmet>
 			<div className="home">
 				<h1 className="home__title">Creative web studio</h1>
-				<h1 style={{ color: "hsl(0,0%,50%)" }}>
+				<h2 className="home__sec-title" style={{ color: "hsl(0,0%,50%)" }}>
 					Digital and Graphic Design Studio
 					<br />
 					based in Copenhagen.
@@ -106,12 +106,10 @@ const Home = () => {
 					Crafting Visual Personalities
 					<br />
 					and Digital Experiences.
-				</h1>
+				</h2>
 			</div>
-			<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
-				Recent work
-			</h2>
-			<p>
+			<h2 style={{ marginTop: 100 }}>Recent work</h2>
+			<p style={{ color: "hsl(0, 0%, 50%)" }}>
 				A selection of past and ongoing projects. Some wer built for clients,
 				others for ourselves - from early experiments to full-scale systems, our
 				work spans disciplines and formats.

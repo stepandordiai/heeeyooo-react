@@ -1,10 +1,8 @@
 import { Helmet } from "react-helmet";
 import workData from "../../data/work-data.json";
 import arrowIcon from "/icons/arrow-upper-right.png";
-import "./Portfolio.scss";
 import { useEffect, useState } from "react";
-import gridIcon from "/icons/grid.svg";
-import listIcon from "/icons/line.svg";
+import "./Portfolio.scss";
 
 const Portfolio = () => {
 	const [layout, setLayout] = useState("works__list");
@@ -61,21 +59,22 @@ const Portfolio = () => {
 				<title>Portfolio | heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/portfolio" />
 			</Helmet>
-			<h1>All works</h1>
+			<h1>Portfolio</h1>
+			<h2>All works</h2>
 			<div className="portfolio__btn-container">
 				<button
 					className={layout === "works__list" && "portfolio__btn--active"}
 					onClick={() => handleLayout("works__list")}
 				>
 					<span>List</span>
-					<img width={15} src={listIcon} alt="" />
+					<i class="fa-solid fa-bars"></i>
 				</button>
 				<button
 					className={layout === "works__grid" && "portfolio__btn--active"}
 					onClick={() => handleLayout("works__grid")}
 				>
 					<span>Grid</span>
-					<img className="grid-icon" width={15} src={gridIcon} alt="" />
+					<i class="fa-solid fa-grip"></i>
 				</button>
 			</div>
 			{layout === "works__list" && (
