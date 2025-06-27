@@ -4,7 +4,21 @@
 		"name": "MaxFlow",
 		"date": "June | 2025",
 		"img": "/portfolio-ss/max-flow-ss-v1-c.png",
-		"siteUrl": "https://flovas.netlify.app/"
+		"siteUrl": "https://maxflow.netlify.app/"
+	},
+	{
+		"id": "shelfy",
+		"name": "Shelfy",
+		"date": "June | 2025",
+		"img": "/portfolio-ss/max-flow-ss-v1-c.png",
+		"siteUrl": "https://shelfy-project.netlify.app/"
+	},
+	{
+		"id": "kristian-yanko",
+		"name": "Kristian Yanko",
+		"date": "May | 2025",
+		"img": "/portfolio-ss/flovas-screenshot-v2.png",
+		"siteUrl": "https://kristian-yanko.netlify.app/"
 	},
 	{
 		"id": "flovas",
@@ -31,7 +45,7 @@
 		"id": "neresen",
 		"name": "Neresen",
 		"date": "February | 2025",
-		"img": "/portfolio-ss/neresen-screenshot-v3.png",
+		"img": "/portfolio-ss/neresen-ss-v5-c.png",
 		"siteUrl": "https://neresen.cz/"
 	},
 	{
@@ -59,7 +73,7 @@
 		"id": "tasty-burger",
 		"name": "Tasty Burger",
 		"date": "October | 2024",
-		"img": "/portfolio-ss/Screenshot (81).png",
+		"img": "/portfolio-ss/tasty-burger-ss-v2-c.png",
 		"siteUrl": "https://stepandordiai.github.io/tasty-burger/"
 	},
 	{
