@@ -24,31 +24,6 @@ const Header = () => {
 	}
 
 	useEffect(() => {
-		// window.addEventListener("resize", () => {
-		// 	const screenSizeElement = document.createElement("div");
-
-		// 	Object.assign(screenSizeElement.style, {
-		// 		position: "fixed",
-		// 		bottom: "0",
-		// 		left: "0",
-		// 		background: "rgba(255, 255, 255, 0.5)",
-		// 		webkitBackdropFilter: "blur(25px)",
-		// 		backdropFilter: "blur(25px)",
-		// 		width: "150px",
-		// 		height: "100px",
-		// 		display: "flex",
-		// 		justifyContent: "center",
-		// 		alignItems: "center",
-		// 		fontSize: "2rem",
-		// 	});
-
-		// 	screenSizeElement.textContent = window.innerWidth;
-		// 	document.body.append(screenSizeElement);
-		// 	setTimeout(() => {
-		// 		screenSizeElement.remove();
-		// 	}, 3000);
-		// });
-
 		let prevScroll = 0;
 		function handleHeaderOnScroll() {
 			const scroll = document.documentElement.scrollTop;
@@ -80,9 +55,9 @@ const Header = () => {
 						src={logoImg}
 						alt="heeeyooo Logo"
 					/>
-					<p className="header__logo-title">
+					{/* <p className="header__logo-title">
 						heeeyooo <span>studio</span>
-					</p>
+					</p> */}
 				</NavLink>
 				<span className="header__active-page">{getPageTitle()}</span>
 				<nav className="header__nav">
@@ -90,7 +65,7 @@ const Header = () => {
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={"/"}
 					>
-						Home
+						<span>Home</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

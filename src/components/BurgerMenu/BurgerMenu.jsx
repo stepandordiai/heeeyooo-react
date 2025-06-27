@@ -9,6 +9,14 @@ const BurgerMenu = () => {
 			document
 				.querySelector(".burger-menu")
 				.classList.remove("burger-menu--active");
+			const headerNavLink = document.querySelectorAll(".burger-menu__nav-link");
+
+			const start = 50;
+			headerNavLink.forEach((link, index) => {
+				setTimeout(() => {
+					link.classList.remove("burger-menu__nav-link--show");
+				}, start + 50 * index);
+			});
 		}),
 	]);
 
@@ -18,32 +26,48 @@ const BurgerMenu = () => {
 	return (
 		<>
 			<div className="burger-menu">
-				<div className="burger-menu__nav">
-					<NavLink
-						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/"}
-					>
-						Home
-					</NavLink>
-					<NavLink
-						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/about"}
-					>
-						About
-					</NavLink>
-					<NavLink
-						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/portfolio"}
-					>
-						Portfolio
-					</NavLink>
-					<NavLink
-						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/contacts"}
-					>
-						Contacts
-					</NavLink>
-				</div>
+				<nav className="burger-menu__nav">
+					<div className="burger-menu__nav-item">
+						<NavLink
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to={"/"}
+						>
+							Home
+						</NavLink>
+					</div>
+					<div className="burger-menu__nav-item">
+						<NavLink
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to={"/about"}
+						>
+							About
+						</NavLink>
+					</div>
+					<div className="burger-menu__nav-item">
+						<NavLink
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to={"/portfolio"}
+						>
+							Portfolio
+						</NavLink>
+					</div>
+					<div className="burger-menu__nav-item">
+						<NavLink
+							className={({ isActive }) =>
+								isActive ? activeLink : inactiveLink
+							}
+							to={"/contacts"}
+						>
+							Contacts
+						</NavLink>
+					</div>
+				</nav>
 			</div>
 		</>
 	);
