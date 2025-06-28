@@ -1,7 +1,6 @@
 @use "./../../scss/mixins" as *;
 .home {
 	height: 100svh;
-	// @include flex-center;
 }
 
 h1 {
@@ -17,7 +16,6 @@ h2 {
 	margin-top: 20px;
 	font-size: clamp(3rem, 4vw, 4rem);
 	color: hsl(0, 0%, 50%);
-	// color: #fff;
 }
 
 .home__sec-title {
@@ -103,16 +101,12 @@ h2 {
 .scroll-line {
 	position: fixed;
 	right: 0;
-	// top: 50%;
-	// transform: translateY(-50%);
 	top: 0;
-	// bottom: 20px;
 	height: 100%;
 	width: 5px;
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 	background: rgba(255, 255, 255, 0.25);
-	// border-radius: 4px;
 	overflow: hidden;
 	cursor: pointer;
 	transition: all 0.3s;
@@ -151,6 +145,16 @@ h2 {
 	font-weight: 500;
 	width: 100%;
 	opacity: 0;
+}
+
+.technologies {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 0 100px;
+	font-size: 1.5rem;
 }
 
 @media screen and (width <=1000px) {

@@ -159,6 +159,64 @@ const Home = () => {
 					<p>SEO</p>
 				</div>
 			</div>
+			<h2 style={{ textAlign: "center" }}>Technologies</h2>
+			<div className="technologies">
+				<p>Next.js</p>
+				<p>Bootstrap</p>
+				<p>React</p>
+				<p>Sass</p>
+				<p>CSS</p>
+				<p>HTML</p>
+				<p>Node.js</p>
+				<p>Express.js</p>
+				<p>TypeScript</p>
+				<p>JavaScript</p>
+				<p>Python</p>
+				<p>MongoDB</p>
+				<p>Figma</p>
+				<p>GitHub</p>
+				<p>Git</p>
+			</div>
+			<h2>Our process</h2>
+			<p>Efficient, Transparent, and Custom-Tailored</p>
+			<p>
+				We follow a streamlined process to ensure your app is developed
+				efficiently and meets the highest standards.
+			</p>
+			<div>
+				<div>
+					<p>1</p>
+					<p>Consultation</p>
+					<p>
+						We begin by understanding your business needs and goals for your
+						app.
+					</p>
+				</div>
+				<div>
+					<p>2</p>
+					<p>Design</p>
+					<p>
+						Our team designs a user-friendly interface that offers an engaging
+						experience on all devices.
+					</p>
+				</div>
+				<div>
+					<p>3</p>
+					<p>Development</p>
+					<p>
+						We build your app using cutting-edge technologies for optimal
+						performance across all browsers and devices.
+					</p>
+				</div>
+				<div>
+					<p>4</p>
+					<p>Launch</p>
+					<p>
+						We successfully launch your app and provide ongoing support to
+						ensure long-term success.
+					</p>
+				</div>
+			</div>
 			<div onClick={handleScrollToTop} className="scroll-line">
 				<div className="scroll-line-inner"></div>
 			</div>

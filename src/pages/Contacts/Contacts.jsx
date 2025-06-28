@@ -90,11 +90,36 @@ const Contacts = () => {
 							<i className="fa-brands fa-facebook-f"></i>
 						</div>
 					</div>
-
 					<div className="contacts__details-map">
 						<p className="contacts__details-title">Kolin, Prague</p>
 						<i className="fa-solid fa-map"></i>
 						<div id="map"></div>
+					</div>
+					<div className="contacts__details">
+						<p>
+							Don't like forms? Write us a message instead!
+							hello@heeeyooo.studio
+						</p>
+						<p>Got ideas? We've got the skills. Let's team up.</p>
+						<p>Tell us more about yourself and what you've got in mind.</p>
+						<form className="form" action="">
+							<input type="text" placeholder="Your name" />
+							<input type="text" placeholder="you@company.com" />
+							<div className="input-container">
+								<label htmlFor="">Tell us a little about the project...</label>
+								<textarea name="" id=""></textarea>
+							</div>
+							<p>How can we help?</p>
+							<div className="check-container">
+								<input type="checkbox" name="" id="" />
+								<input type="checkbox" name="" id="" />
+								<input type="checkbox" name="" id="" />
+								<input type="checkbox" name="" id="" />
+								<input type="checkbox" name="" id="" />
+								<input type="checkbox" name="" id="" />
+							</div>
+							<button type="submit">Let's get started!</button>
+						</form>
 					</div>
 				</div>
 			</div>
