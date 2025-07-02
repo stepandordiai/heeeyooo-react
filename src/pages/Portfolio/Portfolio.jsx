@@ -67,14 +67,12 @@ const Portfolio = () => {
 					onClick={() => handleLayout("works__list")}
 				>
 					<span>List</span>
-					<i class="fa-solid fa-bars"></i>
 				</button>
 				<button
 					className={layout === "works__grid" && "portfolio__btn--active"}
 					onClick={() => handleLayout("works__grid")}
 				>
 					<span>Grid</span>
-					<i class="fa-solid fa-grip"></i>
 				</button>
 			</div>
 			{layout === "works__list" && (
@@ -87,8 +85,8 @@ const Portfolio = () => {
 								href={project.siteUrl}
 								target="_blank"
 							>
+								<p className="work__name">{project.name}</p>
 								<div className="work__desc">
-									<p className="work__name">{project.name}</p>
 									<p
 										className="work__date"
 										style={{ fontWeight: 300, color: "rgba(255,255,255,0.5" }}
@@ -97,7 +95,6 @@ const Portfolio = () => {
 									</p>
 									<p>Design & Development</p>
 								</div>
-								<img width={20} height={20} src={arrowIcon} alt="" />
 							</a>
 						);
 					})}

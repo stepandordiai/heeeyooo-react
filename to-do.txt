@@ -1,0 +1,1 @@
+dont show img element in portfolio for mobile
