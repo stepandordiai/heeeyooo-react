@@ -1,0 +1,13 @@
+.technologies {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 0 100px;
+	font-size: 1.5rem;
+
+	img {
+		height: 70px;
+	}
+}

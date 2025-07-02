@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import "./Home.scss";
 import workData from "./../../data/work-data.json";
 import { useEffect } from "react";
+import Technologies from "../../components/Technologies/Technologies";
 
 const Home = () => {
 	function isTouchDevice() {
@@ -159,24 +160,7 @@ const Home = () => {
 					<p>SEO</p>
 				</div>
 			</div>
-			<h2 style={{ textAlign: "center" }}>Technologies</h2>
-			<div className="technologies">
-				<p>Next.js</p>
-				<p>Bootstrap</p>
-				<p>React</p>
-				<p>Sass</p>
-				<p>CSS</p>
-				<p>HTML</p>
-				<p>Node.js</p>
-				<p>Express.js</p>
-				<p>TypeScript</p>
-				<p>JavaScript</p>
-				<p>Python</p>
-				<p>MongoDB</p>
-				<p>Figma</p>
-				<p>GitHub</p>
-				<p>Git</p>
-			</div>
+			<Technologies />
 			<h2>Our process</h2>
 			<p>Efficient, Transparent, and Custom-Tailored</p>
 			<p>
