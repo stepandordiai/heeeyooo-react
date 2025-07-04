@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import workData from "../../data/work-data.json";
 import arrowIcon from "/icons/arrow-upper-right.png";
 import { useEffect, useState } from "react";
+import isTouchDevice from "../../utils/isTouchDevice";
 import "./Portfolio.scss";
 
 const Portfolio = () => {
@@ -17,6 +18,8 @@ const Portfolio = () => {
 
 		work.forEach((project, index) => {
 			project.addEventListener("mousemove", (e) => {
+				// Check for touch device
+				if (!isTouchDevice()) return;
 				const projectRect = project.getBoundingClientRect();
 
 				// Check if the element already exists
