@@ -6,6 +6,7 @@ import Portfolio from "./pages/Portfolio/Portfolio";
 import Contacts from "./pages/Contacts/Contacts";
 import Footer from "./components/Footer/Footer";
 import "./scss/App.scss";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/contacts" element={<Contacts />} />
 			</Routes>
 			<Footer />
+			<ScrollToTop />
 		</Router>
 	);
 }
