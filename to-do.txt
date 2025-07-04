@@ -1,1 +1,3 @@
 dont show img element in portfolio for mobile
+add form for formspire with hello@
+add isTouchDevice
