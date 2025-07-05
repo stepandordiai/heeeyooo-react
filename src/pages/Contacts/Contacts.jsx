@@ -110,50 +110,66 @@ const Contacts = () => {
 						<i className="fa-solid fa-map"></i>
 						<div id="map"></div>
 					</div>
-					<div className="contacts__details">
-						<p>
+					<div className="contacts__form-details">
+						{/* <p>
 							Don't like forms? Write us a message instead!
 							hello@heeeyooo.studio
+						</p> */}
+						<p className="contacts__form-details-title">
+							Got ideas? We've got the skills. Let's team up.
 						</p>
-						<p>Got ideas? We've got the skills. Let's team up.</p>
 						<p>Tell us more about yourself and what you've got in mind.</p>
 						<form
-							className="form"
+							className="contacts__form"
 							action="https://formspree.io/f/xovddpld"
 							method="POST"
 							// encType="plain/text"
 						>
-							<input
-								onChange={handleFormChange}
-								type="text"
-								name="firstName"
-								placeholder="Your name"
-								value={formData.firstName}
-							/>
-							<input
-								onChange={handleFormChange}
-								type="text"
-								name="email"
-								placeholder="you@company.com"
-								value={formData.email}
-							/>
-							<div className="input-container">
+							<div className="contacts__form-container">
+								<label htmlFor="">Your name</label>
+								<input
+									className="input"
+									onChange={handleFormChange}
+									type="text"
+									name="firstName"
+									// placeholder="Your name"
+									value={formData.firstName}
+								/>
+							</div>
+							<div className="contacts__form-container">
+								<label htmlFor="">E-mail</label>
+								<input
+									className="input"
+									onChange={handleFormChange}
+									type="text"
+									name="email"
+									// placeholder="you@company.com"
+									value={formData.email}
+								/>
+							</div>
+
+							<div className="contacts__form-container">
 								<label htmlFor="">Tell us a little about the project...</label>
 								<textarea name="" id=""></textarea>
 							</div>
 							<p>How can we help?</p>
 							<div className="check-container">
-								<div>
-									<label htmlFor="strategy">Strategy</label>
+								<div
+									style={{
+										display: "flex",
+										justifyContent: "center",
+										alignItems: "center",
+									}}
+								>
 									<input
 										type="checkbox"
 										name="howCanWeHelp"
 										id="strategy"
 										value="Strategy"
 									/>
+									<label htmlFor="strategy">Strategy</label>
 								</div>
 								<div>
-									<label htmlFor="design">Design</label>
 									<input
 										onChange={handleFormChange}
 										type="checkbox"
@@ -161,9 +177,9 @@ const Contacts = () => {
 										id="design"
 										value="Design"
 									/>
+									<label htmlFor="design">Design</label>
 								</div>
 								<div>
-									<label htmlFor="development">Development</label>
 									<input
 										onChange={handleFormChange}
 										type="checkbox"
@@ -171,9 +187,9 @@ const Contacts = () => {
 										id="development"
 										value="Development"
 									/>
+									<label htmlFor="development">Development</label>
 								</div>
 								<div>
-									<label htmlFor="hosting">Hosting</label>
 									<input
 										onChange={handleFormChange}
 										type="checkbox"
@@ -181,11 +197,9 @@ const Contacts = () => {
 										id="hosting"
 										value="Hosting"
 									/>
+									<label htmlFor="hosting">Hosting</label>
 								</div>
 								<div>
-									<label htmlFor="website-maintenance">
-										Website Maintenance
-									</label>
 									<input
 										onChange={handleFormChange}
 										type="checkbox"
@@ -193,9 +207,11 @@ const Contacts = () => {
 										id="website-maintenance"
 										value="Website Maintenance"
 									/>
+									<label htmlFor="website-maintenance">
+										Website Maintenance
+									</label>
 								</div>
 								<div>
-									<label htmlFor="seo">SEO</label>
 									<input
 										onChange={handleFormChange}
 										type="checkbox"
@@ -203,9 +219,12 @@ const Contacts = () => {
 										id="seo"
 										value="SEO"
 									/>
+									<label htmlFor="seo">SEO</label>
 								</div>
 							</div>
-							<button type="submit">Let's get started!</button>
+							<button className="contacts__form-btn" type="submit">
+								Let's get started!
+							</button>
 						</form>
 					</div>
 				</div>

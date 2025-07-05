@@ -19,7 +19,7 @@ const Portfolio = () => {
 		work.forEach((project, index) => {
 			project.addEventListener("mousemove", (e) => {
 				// Check for touch device
-				if (!isTouchDevice()) return;
+				if (isTouchDevice()) return;
 				const projectRect = project.getBoundingClientRect();
 
 				// Check if the element already exists

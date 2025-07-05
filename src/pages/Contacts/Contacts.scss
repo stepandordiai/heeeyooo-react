@@ -54,20 +54,22 @@
 	row-gap: 10px;
 }
 
-input {
-	padding: 10px 0;
-	border-bottom: 3px solid hsl(0, 0%, 50%);
+.input {
+	border-bottom: 3px solid #000;
 	outline: none !important;
 	border-radius: 0 !important;
-	transition: all 0.15s;
+	transition: all 0.3s;
+	width: 100%;
+}
 
-	&:hover {
-		border-bottom: 3px solid hsl(0, 0%, 100%);
-	}
-
-	&:focus {
-		border-bottom: 3px solid hsl(0, 0%, 100%);
-	}
+textarea {
+	width: 100%;
+	padding: 10px 0;
+	border-bottom: 3px solid #000;
+	outline: none !important;
+	border-radius: 0 !important;
+	resize: none;
+	transition: all 0.3s;
 }
 
 .contacts__form-btn {
@@ -162,6 +164,50 @@ input {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
+}
+
+.contacts__form-details {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 100%;
+	min-height: 200px;
+	border-radius: 15px;
+	padding: 20px;
+	overflow: hidden;
+	background: var(--accent-clr);
+	color: #000;
+}
+
+.contacts__form-details-title {
+	font-size: clamp(1rem, 4vw, 1.5rem);
+	font-weight: 500 !important;
+}
+
+.contacts__form-details-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.check-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	div {
+		justify-self: flex-start;
+	}
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+.contacts__form-btn {
+	background: #000;
+	color: #fff;
+	border-radius: 10px;
 }
 
 @media screen and (width < 896px) {
