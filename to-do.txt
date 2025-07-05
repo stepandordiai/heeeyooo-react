@@ -1,5 +1,2 @@
 add form for formspire with hello@
-update socials with target
-update Flovas to flovas
-add transition for img element in portfolio
 look for nice designs for process, services and technologies

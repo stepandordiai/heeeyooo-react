@@ -95,6 +95,7 @@ const Contacts = () => {
 					<div className="contacts__socials">
 						<a
 							href="https://www.instagram.com/heeeyooo.studio/"
+							target="_blank"
 							className="contacts__details"
 						>
 							<p className="contacts__details-title">Follow us on Instagram</p>
