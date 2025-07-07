@@ -42,10 +42,24 @@
 	padding: 20px 0;
 	cursor: none;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+	opacity: 0;
+	transform: translateY(15px);
 	transition: border-bottom 0.3s;
 
 	&:hover {
 		border-bottom: 2px solid rgba(255, 255, 255, 1);
+	}
+}
+
+.work--active {
+	// opacity: 1;
+	animation: animateWork 1s forwards;
+}
+
+@keyframes animateWork {
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -56,6 +70,8 @@
 	background: rgb(50, 50, 50);
 	padding: 10px;
 	border-radius: 15px;
+	opacity: 0;
+	transform: translateY(15px);
 }
 
 .portfolio__img {

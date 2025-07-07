@@ -3,9 +3,9 @@ import workData from "../../data/work-data.json";
 import arrowIcon from "/icons/arrow-upper-right.png";
 import { useEffect, useState } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
-import "./Portfolio.scss";
+import "./Work.scss";
 
-const Portfolio = () => {
+const Work = () => {
 	const [layout, setLayout] = useState("works__list");
 
 	function handleLayout(props) {
@@ -54,7 +54,47 @@ const Portfolio = () => {
 				}
 			});
 		});
-	});
+
+		if (layout === "works__list") {
+			const works = document.querySelectorAll(".work");
+			let time = 75;
+			works.forEach((work, index) => {
+				document.addEventListener("scroll", () => {
+					const workRect = work.getBoundingClientRect();
+					if (workRect.top < window.innerHeight - 100) {
+						// setTimeout(() => {
+						work.classList.add(`work--active`);
+						// }, time + 75 * index);
+					}
+				});
+				const workRect = work.getBoundingClientRect();
+				if (workRect.top < window.innerHeight - 100) {
+					setTimeout(() => {
+						work.classList.add(`work--active`);
+					}, time + 75 * index);
+				}
+			});
+		}
+
+		if (layout === "works__grid") {
+			const works = document.querySelectorAll(".work__grid");
+			let time = 75;
+			works.forEach((work, index) => {
+				document.addEventListener("scroll", () => {
+					const workRect = work.getBoundingClientRect();
+					if (workRect.top < window.innerHeight - 100) {
+						work.classList.add(`work--active`);
+					}
+				});
+				const workRect = work.getBoundingClientRect();
+				if (workRect.top < window.innerHeight - 100) {
+					setTimeout(() => {
+						work.classList.add(`work--active`);
+					}, time + 75 * index);
+				}
+			});
+		}
+	}, [layout]);
 
 	return (
 		<>
@@ -62,7 +102,7 @@ const Portfolio = () => {
 				<title>Portfolio | heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/portfolio" />
 			</Helmet>
-			<h1>Portfolio</h1>
+			<h1>Work</h1>
 			<h2>All works</h2>
 			<div className="portfolio__btn-container">
 				<button
@@ -127,4 +167,4 @@ const Portfolio = () => {
 	);
 };
 
-export default Portfolio;
+export default Work;

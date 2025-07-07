@@ -52,9 +52,9 @@ const BurgerMenu = () => {
 							className={({ isActive }) =>
 								isActive ? activeLink : inactiveLink
 							}
-							to={"/portfolio"}
+							to={"/work"}
 						>
-							Portfolio
+							Work
 						</NavLink>
 					</div>
 					<div className="burger-menu__nav-item">
