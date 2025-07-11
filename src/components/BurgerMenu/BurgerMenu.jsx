@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./BurgerMenu.scss";
 
 const BurgerMenu = () => {
+	const { lng } = useParams();
+
 	document.querySelectorAll(".burger-menu__nav-link").forEach((link) => [
 		link.addEventListener("click", () => {
 			document.querySelector(".burger-1").classList.remove("burger-1--active");
@@ -32,7 +35,7 @@ const BurgerMenu = () => {
 							className={({ isActive }) =>
 								isActive ? activeLink : inactiveLink
 							}
-							to={"/"}
+							to={`/${lng}`}
 						>
 							Home
 						</NavLink>
@@ -42,7 +45,7 @@ const BurgerMenu = () => {
 							className={({ isActive }) =>
 								isActive ? activeLink : inactiveLink
 							}
-							to={"/about"}
+							to={`/${lng}/about`}
 						>
 							About
 						</NavLink>
@@ -52,7 +55,7 @@ const BurgerMenu = () => {
 							className={({ isActive }) =>
 								isActive ? activeLink : inactiveLink
 							}
-							to={"/work"}
+							to={`/${lng}/work`}
 						>
 							Work
 						</NavLink>
@@ -62,7 +65,7 @@ const BurgerMenu = () => {
 							className={({ isActive }) =>
 								isActive ? activeLink : inactiveLink
 							}
-							to={"/contacts"}
+							to={`/${lng}/contacts`}
 						>
 							Contacts
 						</NavLink>

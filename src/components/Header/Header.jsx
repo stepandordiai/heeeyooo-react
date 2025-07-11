@@ -4,19 +4,24 @@ import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import logoImg from "/heeeyooo-studio-logo-white-v1.svg";
 import "./Header.scss";
+import { useParams } from "react-router-dom";
 
 const Header = () => {
 	const { pathname } = useLocation();
 
+	const { lng } = useParams();
+
+	console.log(pathname);
+
 	function getPageTitle() {
 		switch (pathname) {
-			case "/":
+			case `/${lng}`:
 				return "Home";
-			case "/about":
+			case `/${lng}/about`:
 				return "About";
-			case "/portfolio":
-				return "Portfolio";
-			case "/contacts":
+			case `/${lng}/work`:
+				return "Work";
+			case `/${lng}/contacts`:
 				return "Contacts";
 			default:
 				return "";
@@ -47,7 +52,7 @@ const Header = () => {
 	return (
 		<header className="header">
 			<div className="header__inner">
-				<NavLink className="header__logo-link" to={"/"}>
+				<NavLink className="header__logo-link" to={`/${lng}`}>
 					<img
 						width={35}
 						height={35}
@@ -63,25 +68,26 @@ const Header = () => {
 				<nav className="header__nav">
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/"}
+						to={`/${lng}`}
+						end
 					>
 						<span>Home</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/about"}
+						to={`/${lng}/about`}
 					>
 						About
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/work"}
+						to={`/${lng}/work`}
 					>
 						Work
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
-						to={"/contacts"}
+						to={`/${lng}/contacts`}
 					>
 						Contacts
 					</NavLink>

@@ -1,5 +1,7 @@
-import "./Footer.scss";
 import { NavLink } from "react-router-dom";
+// import LngBtn from "./components/LngBtn/LngBtn";
+import LngBtn from "../LngBtn/LngBtn";
+import "./Footer.scss";
 
 const Footer = () => {
 	return (
@@ -34,6 +36,7 @@ const Footer = () => {
 						</a>
 					</div>
 				</div>
+				<LngBtn />
 				<div className="footer-bottom">
 					<p>&copy; 2025 heeeyooo studio</p>
 					<p>All rights reserved</p>

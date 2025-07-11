@@ -61,14 +61,14 @@ const Work = () => {
 			works.forEach((work, index) => {
 				document.addEventListener("scroll", () => {
 					const workRect = work.getBoundingClientRect();
-					if (workRect.top < window.innerHeight - 100) {
+					if (workRect.top < window.innerHeight) {
 						// setTimeout(() => {
 						work.classList.add(`work--active`);
 						// }, time + 75 * index);
 					}
 				});
 				const workRect = work.getBoundingClientRect();
-				if (workRect.top < window.innerHeight - 100) {
+				if (workRect.top < window.innerHeight) {
 					setTimeout(() => {
 						work.classList.add(`work--active`);
 					}, time + 75 * index);
@@ -82,12 +82,12 @@ const Work = () => {
 			works.forEach((work, index) => {
 				document.addEventListener("scroll", () => {
 					const workRect = work.getBoundingClientRect();
-					if (workRect.top < window.innerHeight - 100) {
+					if (workRect.top < window.innerHeight) {
 						work.classList.add(`work--active`);
 					}
 				});
 				const workRect = work.getBoundingClientRect();
-				if (workRect.top < window.innerHeight - 100) {
+				if (workRect.top < window.innerHeight) {
 					setTimeout(() => {
 						work.classList.add(`work--active`);
 					}, time + 75 * index);

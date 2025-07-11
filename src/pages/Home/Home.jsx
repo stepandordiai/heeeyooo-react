@@ -3,8 +3,11 @@ import "./Home.scss";
 import workData from "./../../data/work-data.json";
 import { useEffect } from "react";
 import Technologies from "../../components/Technologies/Technologies";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+	const { t } = useTranslation();
+
 	function isTouchDevice() {
 		try {
 			document.createEvent("TouchEvent");
@@ -98,7 +101,7 @@ const Home = () => {
 				<link rel="canonical" href="https://heeeyooo.studio/" />
 			</Helmet>
 			<div className="home">
-				<h1 className="home__title">Creative web studio</h1>
+				<h1 className="home__title">{t("home_title")}</h1>
 				<h2 className="home__sec-title" style={{ color: "hsl(0,0%,50%)" }}>
 					Digital and Graphic Design Studio
 					<br />
