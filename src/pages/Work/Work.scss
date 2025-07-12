@@ -25,6 +25,21 @@
 	color: black !important;
 }
 
+.work__sec-title {
+	position: relative;
+	display: inline-block;
+	font-size: clamp(2rem, 4vw, 3rem) !important;
+
+	span {
+		font-size: 1rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: rgba(255, 255, 255, 0.5);
+		transform: translate(150%, 0%);
+	}
+}
+
 .works__list {
 	display: flex;
 	flex-direction: column;
@@ -38,7 +53,7 @@
 
 .work {
 	position: relative;
-	z-index: 0;
+	// z-index: 0;
 	@include flex-between-center;
 	padding: 20px 0;
 	cursor: none;
@@ -105,6 +120,7 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 50px;
+	position: relative;
 }
 
 .work__date {
@@ -112,8 +128,8 @@
 }
 
 .img-element {
-	position: absolute;
-	z-index: 10;
+	position: absolute; /* or fixed/relative depending on context */
+	z-index: 1000;
 	width: 400px;
 	transform: translate(-50%, -50%);
 	pointer-events: none;

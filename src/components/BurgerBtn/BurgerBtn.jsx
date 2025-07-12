@@ -25,14 +25,14 @@ const BurgerBtn = () => {
 			document
 				.querySelector(".burger-menu")
 				.classList.remove("burger-menu--active");
-			const headerNavLink = document.querySelectorAll(".burger-menu__nav-link");
+			// const headerNavLink = document.querySelectorAll(".burger-menu__nav-link");
 
-			const start = 50;
-			headerNavLink.forEach((link, index) => {
-				setTimeout(() => {
-					link.classList.remove("burger-menu__nav-link--show");
-				}, start + 50 * index);
-			});
+			// const start = 50;
+			// headerNavLink.forEach((link, index) => {
+			// 	setTimeout(() => {
+			// 		link.classList.remove("burger-menu__nav-link--show");
+			// 	}, start + 50 * index);
+			// });
 		});
 	}, []);
 

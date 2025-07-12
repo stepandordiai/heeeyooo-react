@@ -22,7 +22,9 @@
 }
 
 .burger-menu__nav-link {
-	display: block;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	padding: 5px 10px;
 	border-radius: 10px;
 	color: #fff;

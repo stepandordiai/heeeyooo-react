@@ -10,6 +10,7 @@ import i18n from "i18next";
 import "./i18next";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
 
 const LngLayout = () => {
 	const { lng } = useParams();
@@ -27,6 +28,7 @@ const LngLayout = () => {
 				<Route path="/about" element={<About />} />
 				<Route path="/work" element={<Work />} />
 				<Route path="/contacts" element={<Contacts />} />
+				<Route path="/project-page/:id" element={<ProjectPage />} />
 			</Routes>
 			<Footer />
 			<ScrollToTop />

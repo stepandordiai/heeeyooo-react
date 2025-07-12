@@ -112,14 +112,10 @@ const Contacts = () => {
 						<div id="map"></div>
 					</div>
 					<div className="contacts__form-details">
-						{/* <p>
-							Don't like forms? Write us a message instead!
-							hello@heeeyooo.studio
-						</p> */}
+						{/* <p>Got ideas? We've got the skills. Let's team up.</p> */}
 						<p className="contacts__form-details-title">
-							Got ideas? We've got the skills. Let's team up.
+							Tell us more about yourself and what you've got in mind.
 						</p>
-						<p>Tell us more about yourself and what you've got in mind.</p>
 						<form
 							className="contacts__form"
 							action="https://formspree.io/f/xovddpld"
@@ -227,6 +223,12 @@ const Contacts = () => {
 								Let's get started!
 							</button>
 						</form>
+						<div style={{ marginTop: 10 }}>
+							<p>Don't like forms? Write us a message instead!</p>
+							<a href="mailto:hello@heeeyooo.studio" style={{ color: "black" }}>
+								hello@heeeyooo.studio
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

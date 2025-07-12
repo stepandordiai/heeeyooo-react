@@ -11,22 +11,20 @@ const Header = () => {
 
 	const { lng } = useParams();
 
-	console.log(pathname);
-
-	function getPageTitle() {
-		switch (pathname) {
-			case `/${lng}`:
-				return "Home";
-			case `/${lng}/about`:
-				return "About";
-			case `/${lng}/work`:
-				return "Work";
-			case `/${lng}/contacts`:
-				return "Contacts";
-			default:
-				return "";
-		}
-	}
+	// function getPageTitle() {
+	// 	switch (pathname) {
+	// 		case `/${lng}`:
+	// 			return "Home";
+	// 		case `/${lng}/about`:
+	// 			return "About";
+	// 		case `/${lng}/work`:
+	// 			return "Work";
+	// 		case `/${lng}/contacts`:
+	// 			return "Contacts";
+	// 		default:
+	// 			return "";
+	// 	}
+	// }
 
 	useEffect(() => {
 		let prevScroll = 0;
@@ -58,13 +56,13 @@ const Header = () => {
 						height={35}
 						className="header__logo-img"
 						src={logoImg}
-						alt="heeeyooo Logo"
+						alt="heeeyooo studio Logo"
 					/>
 					{/* <p className="header__logo-title">
 						heeeyooo <span>studio</span>
 					</p> */}
 				</NavLink>
-				<span className="header__active-page">{getPageTitle()}</span>
+				{/* <span className="header__active-page">{getPageTitle()}</span> */}
 				<nav className="header__nav">
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

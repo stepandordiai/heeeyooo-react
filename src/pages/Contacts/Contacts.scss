@@ -74,15 +74,10 @@ textarea {
 
 .contacts__form-btn {
 	align-self: flex-end;
-	background: rgba(255, 255, 255, 0.1);
 	padding: 10px;
-	border-radius: 5px;
-	transition: all 0.3s;
-
-	&:hover {
-		background: var(--accent-clr);
-		color: #000;
-	}
+	background: #000;
+	color: #fff;
+	border-radius: 10px;
 }
 
 #map {
@@ -202,12 +197,6 @@ textarea {
 
 input[type="checkbox"] {
 	margin-right: 5px;
-}
-
-.contacts__form-btn {
-	background: #000;
-	color: #fff;
-	border-radius: 10px;
 }
 
 @media screen and (width < 896px) {

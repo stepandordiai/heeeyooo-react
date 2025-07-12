@@ -2,12 +2,13 @@
 
 .header {
 	min-height: 50px;
+	width: max-content;
+	// min-width: 500px;
 	position: fixed;
-	bottom: 10px;
+	bottom: 20px;
 	left: 50%;
 	z-index: 1000;
 	transform: translateX(-50%);
-	width: max-content;
 	display: flex;
 	flex-direction: column-reverse;
 	// TODO: 1px or 2px
@@ -21,15 +22,11 @@
 	pointer-events: all;
 }
 
-.header--active {
-	width: calc(100% - 20px) !important;
-}
-
 .header__inner {
 	min-height: 50px;
 	padding: 5px 10px 5px 10px;
 	@include flex-between-center;
-	gap: 40px;
+	gap: 20px;
 }
 
 .header__active-page {
@@ -47,11 +44,11 @@
 	@include flex-center;
 	font-size: 1.5rem;
 	color: #fff;
+	flex-shrink: 0;
 }
 
 .header__nav {
 	display: flex;
-	// gap: 20px;
 	column-gap: 5px;
 }
 
@@ -71,13 +68,9 @@
 	background: rgba(255, 255, 255, 0.15);
 }
 
-@media screen and (width <= 600px) {
+@media screen and (width <= 540px) {
 	.header {
-		width: 300px;
-
-		&:hover {
-			width: calc(100% - 20px);
-		}
+		width: calc(100% - 40px);
 	}
 
 	.header__inner {

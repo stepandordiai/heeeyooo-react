@@ -4,8 +4,12 @@ import arrowIcon from "/icons/arrow-upper-right.png";
 import { useEffect, useState } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
 import "./Work.scss";
+import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Work = () => {
+	const { lng } = useParams();
+
 	const [layout, setLayout] = useState("works__list");
 
 	function handleLayout(props) {
@@ -103,7 +107,11 @@ const Work = () => {
 				<link rel="canonical" href="https://heeeyooo.studio/portfolio" />
 			</Helmet>
 			<h1>Work</h1>
-			<h2>All works</h2>
+			<div>
+				<p className="work__sec-title">
+					All works <span>{workData.length}</span>
+				</p>
+			</div>
 			<div className="portfolio__btn-container">
 				<button
 					className={layout === "works__list" && "portfolio__btn--active"}
@@ -122,11 +130,12 @@ const Work = () => {
 				<div className={layout}>
 					{workData.map((project) => {
 						return (
-							<a
+							<NavLink
 								key={project.id}
 								className="work"
-								href={project.siteUrl}
-								target="_blank"
+								to={`/${lng}/project-page/${project.id}`}
+								// href={project.siteUrl}
+								// target="_blank"
 							>
 								<p className="work__name">{project.name}</p>
 								<div className="work__desc">
@@ -138,7 +147,7 @@ const Work = () => {
 									</p>
 									<p>Design & Development</p>
 								</div>
-							</a>
+							</NavLink>
 						);
 					})}
 				</div>
@@ -147,18 +156,19 @@ const Work = () => {
 				<div className={layout}>
 					{workData.map((project) => {
 						return (
-							<a
+							<NavLink
 								key={project.id}
 								className="work__grid"
-								href={project.siteUrl}
-								target="_blank"
+								to={`/${lng}/project-page/${project.id}`}
+								// href={project.siteUrl}
+								// target="_blank"
 							>
 								<img className="portfolio__img" src={project.img} alt="" />
 								<div className="work__details-grid">
 									<p className="work__name">{project.name}</p>
 									<img width={20} height={20} src={arrowIcon} alt="" />
 								</div>
-							</a>
+							</NavLink>
 						);
 					})}
 				</div>

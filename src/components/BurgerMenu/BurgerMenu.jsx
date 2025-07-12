@@ -1,27 +1,28 @@
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./BurgerMenu.scss";
+import workData from "./../../data/work-data.json";
 
 const BurgerMenu = () => {
 	const { lng } = useParams();
 
-	document.querySelectorAll(".burger-menu__nav-link").forEach((link) => [
+	document.querySelectorAll(".burger-menu__nav-link").forEach((link) => {
 		link.addEventListener("click", () => {
 			document.querySelector(".burger-1").classList.remove("burger-1--active");
 			document.querySelector(".header").classList.remove("header--active");
 			document
 				.querySelector(".burger-menu")
 				.classList.remove("burger-menu--active");
-			const headerNavLink = document.querySelectorAll(".burger-menu__nav-link");
+			// const headerNavLink = document.querySelectorAll(".burger-menu__nav-link");
 
-			const start = 50;
-			headerNavLink.forEach((link, index) => {
-				setTimeout(() => {
-					link.classList.remove("burger-menu__nav-link--show");
-				}, start + 50 * index);
-			});
-		}),
-	]);
+			// const start = 50;
+			// headerNavLink.forEach((link, index) => {
+			// setTimeout(() => {
+			// link.classList.remove("burger-menu__nav-link--show");
+			// }, start + 50 * index);
+			// });
+		});
+	});
 
 	const inactiveLink = "burger-menu__nav-link";
 	const activeLink = "burger-menu__nav-link burger-menu__nav-link--active";
@@ -36,6 +37,7 @@ const BurgerMenu = () => {
 								isActive ? activeLink : inactiveLink
 							}
 							to={`/${lng}`}
+							end
 						>
 							Home
 						</NavLink>
@@ -57,7 +59,8 @@ const BurgerMenu = () => {
 							}
 							to={`/${lng}/work`}
 						>
-							Work
+							<span>Work</span>
+							<span className="work-qty">{workData.length}</span>
 						</NavLink>
 					</div>
 					<div className="burger-menu__nav-item">

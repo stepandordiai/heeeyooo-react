@@ -4,9 +4,13 @@ import workData from "./../../data/work-data.json";
 import { useEffect } from "react";
 import Technologies from "../../components/Technologies/Technologies";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Home = () => {
 	const { t } = useTranslation();
+
+	const { lng } = useParams();
 
 	function isTouchDevice() {
 		try {
@@ -121,18 +125,19 @@ const Home = () => {
 			<div className="home__works">
 				{workData.slice(0, 6).map((project) => {
 					return (
-						<a
+						<NavLink
 							key={project.id}
 							className="home__work rect-animate"
-							href={project.siteUrl}
-							target="_blank"
+							to={`/${lng}/project-page/${project.id}`}
+							// href={project.siteUrl}
+							// target="_blank"
 						>
 							<img className="home__work-img" src={project.img} alt="" />
 							<div className="home__work-details">
 								<p className="home__work-name">{project.name}</p>
 								<p className="home__work-date">{project.date}</p>
 							</div>
-						</a>
+						</NavLink>
 					);
 				})}
 			</div>
