@@ -3,8 +3,9 @@ import { useEffect } from "react";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import logoImg from "/heeeyooo-studio-logo-white-v1.svg";
-import "./Header.scss";
 import { useParams } from "react-router-dom";
+import workData from "./../../data/work-data.json";
+import "./Header.scss";
 
 const Header = () => {
 	const { pathname } = useLocation();
@@ -81,7 +82,8 @@ const Header = () => {
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={`/${lng}/work`}
 					>
-						Work
+						<span>Work</span>
+						<span className="header__work-qty">{workData.length}</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}

@@ -68,6 +68,11 @@
 	background: rgba(255, 255, 255, 0.15);
 }
 
+.header__work-qty {
+	color: var(--accent-clr);
+	margin-left: 5px;
+}
+
 @media screen and (width <= 540px) {
 	.header {
 		width: calc(100% - 40px);
