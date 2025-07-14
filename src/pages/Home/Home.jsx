@@ -92,12 +92,12 @@ const Home = () => {
 		});
 	}, []);
 
-	function handleScrollToTop() {
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth",
-		});
-	}
+	// function handleScrollToTop() {
+	// 	window.scrollTo({
+	// 		top: 0,
+	// 		behavior: "smooth",
+	// 	});
+	// }
 	return (
 		<>
 			<Helmet>
@@ -206,9 +206,9 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<div onClick={handleScrollToTop} className="scroll-line">
+			{/* <div onClick={handleScrollToTop} className="scroll-line">
 				<div className="scroll-line-inner"></div>
-			</div>
+			</div> */}
 		</>
 	);
 };
