@@ -10,12 +10,12 @@ const BurgerBtn = () => {
 		document.querySelector(".burger-1").classList.toggle("burger-1--active");
 		const headerNavLink = document.querySelectorAll(".burger-menu__nav-link");
 
-		const start = 50;
-		headerNavLink.forEach((link, index) => {
-			setTimeout(() => {
-				link.classList.toggle("burger-menu__nav-link--show");
-			}, start + 50 * index);
-		});
+		// const start = 50;
+		// headerNavLink.forEach((link, index) => {
+		// 	setTimeout(() => {
+		// 		link.classList.toggle("burger-menu__nav-link--show");
+		// 	}, start + 50 * index);
+		// });
 	}
 
 	useEffect(() => {

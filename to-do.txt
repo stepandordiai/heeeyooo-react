@@ -1,3 +1,2 @@
-add form for formspire with hello@
 look for nice designs for process, services and technologies
 update logo in futute

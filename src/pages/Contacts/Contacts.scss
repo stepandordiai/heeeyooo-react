@@ -47,6 +47,17 @@
 	gap: 20px;
 }
 
+.contacts__form-container {
+	// position: relative;
+
+	label {
+		// position: absolute;
+		// top: 50%;
+		// left: 0;
+		// transform: translateY(-50%);
+	}
+}
+
 .contacts__form {
 	width: 100%;
 	display: flex;
@@ -64,7 +75,7 @@
 
 textarea {
 	width: 100%;
-	padding: 10px 0;
+	// padding: 10px 0;
 	border-bottom: 3px solid #000;
 	outline: none !important;
 	border-radius: 0 !important;
@@ -146,7 +157,7 @@ textarea {
 }
 
 .contacts__details-title {
-	font-size: clamp(1rem, 4vw, 1.5rem);
+	font-size: clamp(1.25rem, 4vw, 1.5rem);
 	font-weight: 500 !important;
 }
 
@@ -165,7 +176,7 @@ textarea {
 	position: relative;
 	z-index: 1;
 	display: flex;
-	justify-content: space-between;
+	row-gap: 20px;
 	flex-direction: column;
 	width: 100%;
 	min-height: 200px;
@@ -177,8 +188,8 @@ textarea {
 }
 
 .contacts__form-details-title {
-	font-size: clamp(1rem, 4vw, 1.5rem);
-	font-weight: 500 !important;
+	font-size: clamp(1.25rem, 4vw, 1.5rem);
+	font-weight: 500;
 }
 
 .contacts__form-details-container {
@@ -214,7 +225,7 @@ input[type="checkbox"] {
 		min-height: 200px;
 		background: rgba(255, 255, 255, 0.15);
 		border-radius: 15px;
-		padding: 10px;
+		padding: 20px;
 		cursor: pointer;
 
 		a {

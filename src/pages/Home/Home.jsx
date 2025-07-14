@@ -105,15 +105,12 @@ const Home = () => {
 				<link rel="canonical" href="https://heeeyooo.studio/" />
 			</Helmet>
 			<div className="home">
-				<h1 className="home__title">{t("home_title")}</h1>
+				<h1 className="home__title">
+					Creative web design & development agency
+				</h1>
 				<h2 className="home__sec-title" style={{ color: "hsl(0,0%,50%)" }}>
-					Digital and Graphic Design Studio
-					<br />
-					based in Copenhagen.
-					<br />
-					Crafting Visual Personalities
-					<br />
-					and Digital Experiences.
+					We create modern websites, landing pages, <br /> and online stores
+					that work fast, look great, <br /> and grow your business.
 				</h2>
 			</div>
 			<h2 style={{ marginTop: 100 }}>Recent work</h2>

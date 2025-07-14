@@ -112,15 +112,13 @@ const Contacts = () => {
 						<div id="map"></div>
 					</div>
 					<div className="contacts__form-details">
-						{/* <p>Got ideas? We've got the skills. Let's team up.</p> */}
 						<p className="contacts__form-details-title">
 							Tell us more about yourself and what you've got in mind.
 						</p>
 						<form
 							className="contacts__form"
 							action="https://formspree.io/f/xovddpld"
-							method="POST"
-							// encType="plain/text"
+							method="post"
 						>
 							<div className="contacts__form-container">
 								<label htmlFor="">Your name</label>
@@ -129,7 +127,6 @@ const Contacts = () => {
 									onChange={handleFormChange}
 									type="text"
 									name="firstName"
-									// placeholder="Your name"
 									value={formData.firstName}
 								/>
 							</div>
