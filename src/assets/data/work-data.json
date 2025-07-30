@@ -1,7 +1,14 @@
 [
 	{
+		"id": "yolk",
+		"name": "Yolk",
+		"date": "July | 2025",
+		"img": "/portfolio-ss/yolk-ss-v1-c.png",
+		"siteUrl": "https://yolk-project.netlify.app/"
+	},
+	{
 		"id": "max-flow",
-		"name": "MaxFlow",
+		"name": "MaxFlow 360°",
 		"date": "June | 2025",
 		"img": "/portfolio-ss/max-flow-ss-v2-c.png",
 		"siteUrl": "https://maxflow.netlify.app/"
@@ -17,7 +24,7 @@
 		"id": "kristian-yanko",
 		"name": "Kristian Yanko",
 		"date": "May | 2025",
-		"img": "/portfolio-ss/flovas-screenshot-v2.png",
+		"img": "/portfolio-ss/kristian-yanko-ss-v4-c.png",
 		"siteUrl": "https://kristian-yanko.netlify.app/"
 	},
 	{

@@ -1,13 +1,12 @@
 import { Helmet } from "react-helmet";
-import workData from "../../data/work-data.json";
 import arrowIcon from "/icons/arrow-upper-right.png";
 import { useEffect, useState } from "react";
 import isTouchDevice from "../../utils/isTouchDevice";
-import "./Work.scss";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import "./Work.scss";
 
-const Work = () => {
+const Work = ({ workData }) => {
 	const { lng } = useParams();
 
 	const [layout, setLayout] = useState("works__list");

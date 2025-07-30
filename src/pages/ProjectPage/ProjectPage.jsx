@@ -1,11 +1,8 @@
 import "./ProjectPage.scss";
-import workData from "./../../data/work-data.json";
 import { useParams } from "react-router-dom";
 
-const ProjectPage = () => {
+const ProjectPage = ({ workData }) => {
 	const { id } = useParams();
-
-	console.log;
 
 	const project = workData.find((project) => project.id === id);
 

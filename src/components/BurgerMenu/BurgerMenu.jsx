@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./BurgerMenu.scss";
-import workData from "./../../data/work-data.json";
 
-const BurgerMenu = () => {
+const BurgerMenu = ({ workData }) => {
 	const { lng } = useParams();
 
 	document.querySelectorAll(".burger-menu__nav-link").forEach((link) => {
@@ -37,6 +36,7 @@ const BurgerMenu = () => {
 								isActive ? activeLink : inactiveLink
 							}
 							to={`/${lng}`}
+							// TODO: I use it to prevent active state on home navlink because it starts with /
 							end
 						>
 							Home

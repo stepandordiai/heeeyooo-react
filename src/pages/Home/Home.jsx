@@ -1,13 +1,12 @@
 import { Helmet } from "react-helmet";
-import "./Home.scss";
-import workData from "./../../data/work-data.json";
 import { useEffect } from "react";
 import Technologies from "../../components/Technologies/Technologies";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import "./Home.scss";
 
-const Home = () => {
+const Home = ({ workData }) => {
 	const { t } = useTranslation();
 
 	const { lng } = useParams();

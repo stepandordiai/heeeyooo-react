@@ -4,8 +4,8 @@ import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import logoImg from "/heeeyooo-studio-logo-white-v1.svg";
 import { useParams } from "react-router-dom";
-import workData from "./../../data/work-data.json";
 import "./Header.scss";
+import workData from "./../../assets/data/work-data.json";
 
 const Header = () => {
 	const { pathname } = useLocation();
@@ -26,6 +26,8 @@ const Header = () => {
 	// 			return "";
 	// 	}
 	// }
+
+	console.log(workData.length);
 
 	useEffect(() => {
 		let prevScroll = 0;
@@ -94,7 +96,7 @@ const Header = () => {
 				</nav>
 				<BurgerBtn />
 			</div>
-			<BurgerMenu />
+			<BurgerMenu workData={workData} />
 		</header>
 	);
 };

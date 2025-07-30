@@ -8,6 +8,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Work from "./pages/Work/Work";
 import i18n from "i18next";
 import "./i18next";
+import workData from "./assets/data/work-data.json";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
@@ -22,13 +23,16 @@ const LngLayout = () => {
 	}, [lng]);
 	return (
 		<>
-			<Header />
+			<Header workData={workData} />
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route path="/" element={<Home workData={workData} />} />
 				<Route path="/about" element={<About />} />
-				<Route path="/work" element={<Work />} />
+				<Route path="/work" element={<Work workData={workData} />} />
 				<Route path="/contacts" element={<Contacts />} />
-				<Route path="/project-page/:id" element={<ProjectPage />} />
+				<Route
+					path="/project-page/:id"
+					element={<ProjectPage workData={workData} />}
+				/>
 			</Routes>
 			<Footer />
 			<ScrollToTop />
