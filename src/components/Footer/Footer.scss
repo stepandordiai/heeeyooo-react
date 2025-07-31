@@ -13,8 +13,7 @@
 }
 
 .footer-bottom {
-	text-align: center;
-	color: hsl(0, 0%, 50%);
+	@include flex-between-center;
 }
 
 .footer__nav {
@@ -26,6 +25,16 @@
 	color: hsl(0, 0%, 50%);
 
 	&:hover {
-		color: hsl(0, 0%, 100%);
+		color: var(--accent-clr);
+	}
+}
+
+.footer__nav-link--active {
+	color: var(--accent-clr);
+}
+
+@media screen and (width < 808px) {
+	.footer-bottom {
+		flex-direction: column;
 	}
 }
