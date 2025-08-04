@@ -1,7 +1,7 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import Technologies from "../../components/Technologies/Technologies";
-import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./Home.scss";
@@ -103,111 +103,106 @@ const Home = ({ workData }) => {
 				<title>Creative web studio | heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/" />
 			</Helmet>
-			<div className="home">
-				<h1 className="home__title">
-					Creative web design & development agency
-				</h1>
-				<h2 className="home__sec-title" style={{ color: "hsl(0,0%,50%)" }}>
-					We create modern websites, landing pages, <br /> and online stores
-					that work fast, look great, <br /> and grow your business.
+			<main className="home">
+				<div className="home__top">
+					<h1 className="home__title">{t("home.title")}</h1>
+					<h2 className="home__sec-title" style={{ color: "hsl(0,0%,50%)" }}>
+						{t("home.sec_title")}
+					</h2>
+				</div>
+				<h2 style={{ marginTop: 100 }}>{t("recent_work_title")}</h2>
+				<p style={{ color: "hsl(0, 0%, 50%)" }}>{t("recent_work_desc")}</p>
+				<div className="home__works">
+					{workData.slice(0, 6).map((project) => {
+						return (
+							<NavLink
+								key={project.id}
+								className="home__work rect-animate"
+								to={`/${lng}/project-page/${project.id}`}
+								// href={project.siteUrl}
+								// target="_blank"
+							>
+								<img className="home__work-img" src={project.img} alt="" />
+								<div className="home__work-details">
+									<p className="home__work-name">{project.name}</p>
+									<p className="home__work-date">{project.date}</p>
+								</div>
+							</NavLink>
+						);
+					})}
+				</div>
+				<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
+					Services
 				</h2>
-			</div>
-			<h2 style={{ marginTop: 100 }}>Recent work</h2>
-			<p style={{ color: "hsl(0, 0%, 50%)" }}>
-				A selection of past and ongoing projects. Some wer built for clients,
-				others for ourselves - from early experiments to full-scale systems, our
-				work spans disciplines and formats.
-			</p>
-			<div className="home__works">
-				{workData.slice(0, 6).map((project) => {
-					return (
-						<NavLink
-							key={project.id}
-							className="home__work rect-animate"
-							to={`/${lng}/project-page/${project.id}`}
-							// href={project.siteUrl}
-							// target="_blank"
-						>
-							<img className="home__work-img" src={project.img} alt="" />
-							<div className="home__work-details">
-								<p className="home__work-name">{project.name}</p>
-								<p className="home__work-date">{project.date}</p>
-							</div>
-						</NavLink>
-					);
-				})}
-			</div>
-			<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
-				Services
-			</h2>
-			<p>
-				We specialize in crafting websites from idea, through design to
-				development and post-deployment follow-up support.
-			</p>
-			<div className="home__services-grid">
-				<div className="home__service">
-					<p>Strategy</p>
+				<p>
+					We specialize in crafting websites from idea, through design to
+					development and post-deployment follow-up support.
+				</p>
+				<div className="home__services-grid">
+					<div className="home__service">
+						<p>Strategy</p>
+					</div>
+					<div className="home__service">
+						<p>Design</p>
+					</div>
+					<div className="home__service">
+						<p>Hosting</p>
+					</div>
+					<div className="home__service">
+						<p>Development</p>
+					</div>
+					<div className="home__service">
+						<p>Website Maintenance</p>
+					</div>
+					<div className="home__service">
+						<p>SEO</p>
+					</div>
 				</div>
-				<div className="home__service">
-					<p>Design</p>
-				</div>
-				<div className="home__service">
-					<p>Hosting</p>
-				</div>
-				<div className="home__service">
-					<p>Development</p>
-				</div>
-				<div className="home__service">
-					<p>Website Maintenance</p>
-				</div>
-				<div className="home__service">
-					<p>SEO</p>
-				</div>
-			</div>
-			<Technologies />
-			<h2>Our process</h2>
-			<p>Efficient, Transparent, and Custom-Tailored</p>
-			<p>
-				We follow a streamlined process to ensure your app is developed
-				efficiently and meets the highest standards.
-			</p>
-			<div>
+				<Technologies />
+				<h2>Our process</h2>
+				<p>Efficient, Transparent, and Custom-Tailored</p>
+				<p>
+					We follow a streamlined process to ensure your app is developed
+					efficiently and meets the highest standards.
+				</p>
 				<div>
-					<p>1</p>
-					<p>Consultation</p>
-					<p>
-						We begin by understanding your business needs and goals for your
-						app.
-					</p>
+					<div>
+						<p>1</p>
+						<p>Consultation</p>
+						<p>
+							We begin by understanding your business needs and goals for your
+							app.
+						</p>
+					</div>
+					<div>
+						<p>2</p>
+						<p>Design</p>
+						<p>
+							Our team designs a user-friendly interface that offers an engaging
+							experience on all devices.
+						</p>
+					</div>
+					<div>
+						<p>3</p>
+						<p>Development</p>
+						<p>
+							We build your app using cutting-edge technologies for optimal
+							performance across all browsers and devices.
+						</p>
+					</div>
+					<div>
+						<p>4</p>
+						<p>Launch</p>
+						<p>
+							We successfully launch your app and provide ongoing support to
+							ensure long-term success.
+						</p>
+					</div>
 				</div>
-				<div>
-					<p>2</p>
-					<p>Design</p>
-					<p>
-						Our team designs a user-friendly interface that offers an engaging
-						experience on all devices.
-					</p>
-				</div>
-				<div>
-					<p>3</p>
-					<p>Development</p>
-					<p>
-						We build your app using cutting-edge technologies for optimal
-						performance across all browsers and devices.
-					</p>
-				</div>
-				<div>
-					<p>4</p>
-					<p>Launch</p>
-					<p>
-						We successfully launch your app and provide ongoing support to
-						ensure long-term success.
-					</p>
-				</div>
-			</div>
-			{/* <div onClick={handleScrollToTop} className="scroll-line">
+				{/* <div onClick={handleScrollToTop} className="scroll-line">
 				<div className="scroll-line-inner"></div>
 			</div> */}
+			</main>
 		</>
 	);
 };

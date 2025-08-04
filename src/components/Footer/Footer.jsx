@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import LngBtn from "../LngBtn/LngBtn";
 import { useParams } from "react-router-dom";
 import "./Footer.scss";
 
 const Footer = () => {
+	const { t } = useTranslation();
+
 	const { lng } = useParams();
 
 	const inactiveFooterLink = "footer__nav-link";
@@ -22,7 +25,7 @@ const Footer = () => {
 						to={`/${lng}/`}
 						end
 					>
-						Home
+						{t("home_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) =>
@@ -30,7 +33,7 @@ const Footer = () => {
 						}
 						to={`/${lng}/about`}
 					>
-						About
+						{t("about_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) =>
@@ -38,7 +41,7 @@ const Footer = () => {
 						}
 						to={`/${lng}/work`}
 					>
-						Work
+						{t("work_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) =>
@@ -46,23 +49,14 @@ const Footer = () => {
 						}
 						to={`/${lng}/contacts`}
 					>
-						Contacts
+						{t("contacts_title")}
 					</NavLink>
 				</div>
-				{/* <div className="footer__nav">
-					<p>Contact us</p>
-					<a className="footer__nav-link" href="tel:+420722001016">
-						+420 722 001 016
-					</a>
-					<a className="footer__nav-link" href="mailto:hello@heeeyooo.studio">
-						hello@heeeyooo.studio
-					</a>
-				</div> */}
 			</div>
 			<LngBtn />
 			<div className="footer-bottom">
 				<p>&copy; 2025 heeeyooo studio</p>
-				<p>All rights reserved</p>
+				<p>{t("all_rights_reserved")}</p>
 			</div>
 		</footer>
 	);

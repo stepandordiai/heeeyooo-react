@@ -1,14 +1,17 @@
+import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import BurgerBtn from "../BurgerBtn/BurgerBtn";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import logoImg from "/heeeyooo-studio-logo-white-v1.svg";
 import { useParams } from "react-router-dom";
-import "./Header.scss";
 import workData from "./../../assets/data/work-data.json";
+import "./Header.scss";
 
 const Header = () => {
-	const { pathname } = useLocation();
+	const { t } = useTranslation();
+
+	// const { pathname } = useLocation();
 
 	const { lng } = useParams();
 
@@ -26,8 +29,6 @@ const Header = () => {
 	// 			return "";
 	// 	}
 	// }
-
-	console.log(workData.length);
 
 	useEffect(() => {
 		let prevScroll = 0;
@@ -72,26 +73,26 @@ const Header = () => {
 						to={`/${lng}`}
 						end
 					>
-						<span>Home</span>
+						<span>{t("home_title")}</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={`/${lng}/about`}
 					>
-						About
+						{t("about_title")}
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={`/${lng}/work`}
 					>
-						<span>Work</span>
+						<span>{t("work_title")}</span>
 						<span className="header__work-qty">{workData.length}</span>
 					</NavLink>
 					<NavLink
 						className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
 						to={`/${lng}/contacts`}
 					>
-						Contacts
+						{t("contacts_title")}
 					</NavLink>
 				</nav>
 				<BurgerBtn />

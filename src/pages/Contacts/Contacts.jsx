@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import "./Contacts.scss";
 import { useEffect, useState } from "react";
+import "./Contacts.scss";
 
 const Contacts = () => {
+	const { t } = useTranslation();
+
 	const [formData, setFormData] = useState({
 		firstName: "",
 		email: "",
@@ -82,16 +85,16 @@ const Contacts = () => {
 	return (
 		<>
 			<Helmet>
-				<title>Contacts | heeeyooo studio</title>
+				<title>{t("contacts_title")} | heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/contacts" />
 			</Helmet>
-			<h1>Contacts</h1>
-			<div className="contacts">
-				<a href="mailto:hello@heeeyooo.studio" className="contacts__email">
-					<p className="contacts__details-title">Say hello</p>
-					<i className="fa-solid fa-envelope"></i>
-				</a>
-				<div className="contacts__socials-map">
+			<main className="contacts">
+				<h1>{t("contacts_title")}</h1>
+				<div className="contacts__container">
+					<a className="contacts__email" href="mailto:hello@heeeyooo.studio">
+						<p className="contacts__details-title">Say hello</p>
+						<i className="fa-solid fa-envelope"></i>
+					</a>
 					<div className="contacts__socials">
 						<a
 							href="https://www.instagram.com/heeeyooo.studio/"
@@ -101,11 +104,13 @@ const Contacts = () => {
 							<p className="contacts__details-title">Follow us on Instagram</p>
 							<i className="fa-brands fa-instagram"></i>
 						</a>
-						<div className="contacts__details">
+						<a href="" className="contacts__details">
 							<p className="contacts__details-title">Follow us on Facebook</p>
 							<i className="fa-brands fa-facebook-f"></i>
-						</div>
+						</a>
 					</div>
+				</div>
+				<div className="contacts__map-form-container">
 					<div className="contacts__details-map">
 						<p className="contacts__details-title">Kolin, Prague</p>
 						<i className="fa-solid fa-map"></i>
@@ -228,7 +233,7 @@ const Contacts = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 };

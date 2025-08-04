@@ -105,73 +105,75 @@ const Work = ({ workData }) => {
 				<title>Portfolio | heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/portfolio" />
 			</Helmet>
-			<h1>Work</h1>
-			<div>
-				<p className="work__sec-title">
-					All works <span>{workData.length}</span>
-				</p>
-			</div>
-			<div className="portfolio__btn-container">
-				<button
-					className={layout === "works__list" && "portfolio__btn--active"}
-					onClick={() => handleLayout("works__list")}
-				>
-					<span>List</span>
-				</button>
-				<button
-					className={layout === "works__grid" && "portfolio__btn--active"}
-					onClick={() => handleLayout("works__grid")}
-				>
-					<span>Grid</span>
-				</button>
-			</div>
-			{layout === "works__list" && (
-				<div className={layout}>
-					{workData.map((project) => {
-						return (
-							<NavLink
-								key={project.id}
-								className="work"
-								to={`/${lng}/project-page/${project.id}`}
-								// href={project.siteUrl}
-								// target="_blank"
-							>
-								<p className="work__name">{project.name}</p>
-								<div className="work__desc">
-									<p
-										className="work__date"
-										style={{ fontWeight: 300, color: "rgba(255,255,255,0.5" }}
-									>
-										{project.date}
-									</p>
-									<p>Design & Development</p>
-								</div>
-							</NavLink>
-						);
-					})}
+			<main className="work">
+				<h1 className="work__title">Work</h1>
+				<div>
+					<p className="work__sec-title">
+						All works <span>{workData.length}</span>
+					</p>
 				</div>
-			)}
-			{layout === "works__grid" && (
-				<div className={layout}>
-					{workData.map((project) => {
-						return (
-							<NavLink
-								key={project.id}
-								className="work__grid"
-								to={`/${lng}/project-page/${project.id}`}
-								// href={project.siteUrl}
-								// target="_blank"
-							>
-								<img className="portfolio__img" src={project.img} alt="" />
-								<div className="work__details-grid">
+				<div className="portfolio__btn-container">
+					<button
+						className={layout === "works__list" && "portfolio__btn--active"}
+						onClick={() => handleLayout("works__list")}
+					>
+						<span>List</span>
+					</button>
+					<button
+						className={layout === "works__grid" && "portfolio__btn--active"}
+						onClick={() => handleLayout("works__grid")}
+					>
+						<span>Grid</span>
+					</button>
+				</div>
+				{layout === "works__list" && (
+					<div className={layout}>
+						{workData.map((project) => {
+							return (
+								<NavLink
+									key={project.id}
+									className="project"
+									to={`/${lng}/project-page/${project.id}`}
+									// href={project.siteUrl}
+									// target="_blank"
+								>
 									<p className="work__name">{project.name}</p>
-									<img width={20} height={20} src={arrowIcon} alt="" />
-								</div>
-							</NavLink>
-						);
-					})}
-				</div>
-			)}
+									<div className="work__desc">
+										<p
+											className="work__date"
+											style={{ fontWeight: 300, color: "rgba(255,255,255,0.5" }}
+										>
+											{project.date}
+										</p>
+										<p>Design & Development</p>
+									</div>
+								</NavLink>
+							);
+						})}
+					</div>
+				)}
+				{layout === "works__grid" && (
+					<div className={layout}>
+						{workData.map((project) => {
+							return (
+								<NavLink
+									key={project.id}
+									className="work__grid"
+									to={`/${lng}/project-page/${project.id}`}
+									// href={project.siteUrl}
+									// target="_blank"
+								>
+									<img className="portfolio__img" src={project.img} alt="" />
+									<div className="work__details-grid">
+										<p className="work__name">{project.name}</p>
+										<img width={20} height={20} src={arrowIcon} alt="" />
+									</div>
+								</NavLink>
+							);
+						})}
+					</div>
+				)}
+			</main>
 		</>
 	);
 };

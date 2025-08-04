@@ -1,3 +1,30 @@
 {
-	"home_title": "Creative web studio"
+	"home_title": "Home",
+	"about_title": "About",
+	"work_title": "Work",
+	"contacts_title": "Contacts",
+	"recent_work_title": "Recent work",
+	"recent_work_desc": "A selection of past and ongoing projects. Some wer built for clients, others for ourselves - from early experiments to full-scale systems, our work spans disciplines and formats.",
+
+	"jan": "January",
+	"feb": "February",
+	"mar": "March",
+	"apr": "April",
+	"may": "May",
+	"jun": "June",
+	"jul": "July",
+	"aug": "August",
+	"sep": "September",
+	"oct": "October",
+	"nov": "November",
+	"dec": "December",
+
+	"construction": "This page is currently under construction.",
+
+	"all_rights_reserved": "All rights reserved",
+
+	"home": {
+		"title": "Creative web design & development agency",
+		"sec_title": "We create modern websites, landing pages, and online stores that work fast, look great, and grow your business."
+	}
 }
