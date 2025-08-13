@@ -4,7 +4,8 @@
 		"name": "Yolk",
 		"date": "July | 2025",
 		"img": "/work-2560/yolk-ss-2560-v1-c.png",
-		"siteUrl": "https://yolk-project.netlify.app/"
+		"siteUrl": "https://yolk-project.netlify.app/",
+		"isFeatured": true
 	},
 	{
 		"id": "max-flow",
@@ -18,7 +19,8 @@
 		"name": "Shelfy",
 		"date": "June | 2025",
 		"img": "/work-2560/shelfy-ss-2560-v1-c.png",
-		"siteUrl": "https://shelfy-project.netlify.app/"
+		"siteUrl": "https://shelfy-project.netlify.app/",
+		"isFeatured": true
 	},
 	{
 		"id": "kristian-yanko",
@@ -32,14 +34,16 @@
 		"name": "flovas",
 		"date": "April | 2025",
 		"img": "/work-2560/flovas-ss-2560-v1-c.png",
-		"siteUrl": "https://flovas.cz/"
+		"siteUrl": "https://flovas.cz/",
+		"isFeatured": true
 	},
 	{
 		"id": "fve-stavby",
 		"name": "FVE STAVBY",
 		"date": "March | 2025",
 		"img": "/work-2560/fve-stavby-ss-2560-v2-c.png",
-		"siteUrl": "https://fvestavby.cz/"
+		"siteUrl": "https://fvestavby.cz/",
+		"isFeatured": true
 	},
 	{
 		"id": "bourek",
@@ -66,15 +70,17 @@
 		"id": "heeeyooo-studio",
 		"name": "heeeyooo studio",
 		"date": "April | 2025",
-		"img": "/portfolio-ss/heeeyooo-ss-v2-c.png",
-		"siteUrl": "https://heeeyooo.studio/"
+		"img": "/work-2560/heeeyooo-studio-ss-2560-v1-c.png",
+		"siteUrl": "https://heeeyooo.studio/",
+		"isFeatured": true
 	},
 	{
 		"id": "yagoda-karpat",
 		"name": "Yagoda Karpat",
 		"date": "January | 2025",
 		"img": "/work-2560/yagoda-karpat-ss-2560-v1-c.png",
-		"siteUrl": "https://yagodakarpat.com/"
+		"siteUrl": "https://yagodakarpat.com/",
+		"isFeatured": true
 	},
 	{
 		"id": "tasty-burger",

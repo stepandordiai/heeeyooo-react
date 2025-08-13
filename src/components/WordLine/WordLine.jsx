@@ -20,6 +20,15 @@ const WordLine = (props) => {
 					word.classList.remove("word-line--active");
 				}
 			});
+
+			if (!words) return;
+			const wordRect = word.getBoundingClientRect();
+
+			if (wordRect.top < window.innerHeight) {
+				word.classList.add("word-line--active");
+			} else {
+				word.classList.remove("word-line--active");
+			}
 		});
 	}, [lng]);
 	return (
@@ -32,7 +41,6 @@ const WordLine = (props) => {
 							<div className="word-line-wrapper">
 								<div className="word-line">{word}</div>
 							</div>
-							<span> </span>
 						</React.Fragment>
 					);
 				})}

@@ -37,6 +37,7 @@ const LngBtn = () => {
 				>
 					EN
 				</button>
+				<span> &bull; </span>
 				<button
 					className={lng === "uk" ? "active-btn" : "inactive-btn"}
 					onClick={() => handleLngBtn("uk")}

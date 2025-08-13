@@ -4,8 +4,10 @@ import { useEffect } from "react";
 import Technologies from "../../components/Technologies/Technologies";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import "./Home.scss";
 import Services from "../../components/Services/Services";
+import WordLine from "../../components/WordLine/WordLine";
+import logo from "/heeeyooo-studio-logo-white-v1.svg";
+import "./Home.scss";
 
 const Home = ({ workData }) => {
 	const { t } = useTranslation();
@@ -106,31 +108,39 @@ const Home = ({ workData }) => {
 			</Helmet>
 			<main className="home">
 				<div className="home__top">
-					<h1 className="home__title">{t("home.title")}</h1>
-					<h2 className="home__sec-title" style={{ color: "hsl(0,0%,50%)" }}>
-						{t("home.sec_title")}
-					</h2>
+					<h1 className="home__title">
+						<WordLine>{t("home.title")}</WordLine>
+					</h1>
+					<div className="home__desc" style={{ color: "hsl(0,0%,50%)" }}>
+						<WordLine>{t("home.sec_title")}</WordLine>
+					</div>
 				</div>
-				<h2 style={{ marginTop: 100 }}>{t("recent_work_title")}</h2>
-				<p style={{ color: "hsl(0, 0%, 50%)" }}>{t("recent_work_desc")}</p>
+				<h2 style={{ marginTop: 100 }}>
+					<WordLine>{t("featured_work_title")}</WordLine>
+				</h2>
+				<p style={{ marginTop: 20, marginBottom: 20 }}>
+					<WordLine>{t("featured_work_desc")}</WordLine>
+				</p>
 				<div className="home__works">
-					{workData.slice(0, 6).map((project) => {
-						return (
-							<NavLink
-								key={project.id}
-								className="home__work rect-animate"
-								to={`/${lng}/project-page/${project.id}`}
-								// href={project.siteUrl}
-								// target="_blank"
-							>
-								<img className="home__work-img" src={project.img} alt="" />
-								<div className="home__work-details">
-									<p className="home__work-name">{project.name}</p>
-									<p className="home__work-date">{project.date}</p>
-								</div>
-							</NavLink>
-						);
-					})}
+					{workData
+						.filter((project) => project.isFeatured)
+						.map((project) => {
+							return (
+								<NavLink
+									key={project.id}
+									className="home__work rect-animate"
+									to={`/${lng}/project-page/${project.id}`}
+									// href={project.siteUrl}
+									// target="_blank"
+								>
+									<img className="home__work-img" src={project.img} alt="" />
+									<div className="home__work-details">
+										<p className="home__work-name">{project.name}</p>
+										<p className="home__work-date">{project.date}</p>
+									</div>
+								</NavLink>
+							);
+						})}
 				</div>
 				<Services />
 				<Technologies />

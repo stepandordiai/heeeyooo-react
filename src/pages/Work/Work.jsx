@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import arrowIcon from "/icons/arrow-upper-right.png";
 import { useEffect, useState } from "react";
@@ -7,6 +8,8 @@ import { NavLink } from "react-router-dom";
 import "./Work.scss";
 
 const Work = ({ workData }) => {
+	const { t } = useTranslation();
+
 	const { lng } = useParams();
 
 	const [layout, setLayout] = useState("works__list");
@@ -102,11 +105,17 @@ const Work = ({ workData }) => {
 	return (
 		<>
 			<Helmet>
-				<title>Portfolio | heeeyooo studio</title>
+				<title>{t("work_title")} &bull; heeeyooo studio</title>
 				<link rel="canonical" href="https://heeeyooo.studio/portfolio" />
 			</Helmet>
 			<main className="work">
-				<h1 className="work__title">Work</h1>
+				<div style={{ marginBottom: 20 }}>
+					<NavLink className="page-nav__link" to={`/${lng}/`}>
+						{t("home_title")}
+					</NavLink>{" "}
+					&bull;{" "}
+					<span style={{ color: "hsl(0, 0%, 50%)" }}>{t("work_title")}</span>
+				</div>
 				<div>
 					<p className="work__sec-title">
 						All works <span>{workData.length}</span>

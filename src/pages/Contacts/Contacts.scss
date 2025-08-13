@@ -1,11 +1,15 @@
 .contacts {
 	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
 }
 
 .contacts__title {
+	margin-bottom: 20px;
+}
+
+.contacts__inner {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .contacts__container {
@@ -204,12 +208,9 @@ textarea {
 }
 
 .check-container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-
-	div {
-		justify-self: flex-start;
-	}
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 input[type="checkbox"] {
@@ -223,14 +224,14 @@ input[type="checkbox"] {
 
 @media screen and (width < 896px) {
 	.contacts {
-		gap: 10px;
+		flex-direction: column;
 	}
 
 	.contacts__email {
 		display: flex;
 		flex-direction: column-reverse;
 		justify-content: space-between;
-		width: 100%;
+		// width: 100%;
 		min-height: 200px;
 		// background: rgba(255, 255, 255, 0.15);
 		border-radius: 15px;
@@ -260,19 +261,21 @@ input[type="checkbox"] {
 
 	.contacts__socials {
 		display: flex;
-		gap: 10px;
-	}
-}
-
-@media screen and (width < 896px) {
-	.contacts {
-		flex-direction: column;
+		// gap: 10px;
 	}
 }
 
 @media screen and (width < 808px) {
 	.contacts {
 		padding: 10px;
+	}
+
+	.contacts__inner {
+		gap: 10px;
+	}
+
+	.contacts__email {
+		width: 100%;
 	}
 
 	.contacts__container {

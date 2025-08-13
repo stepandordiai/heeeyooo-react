@@ -1,7 +1,11 @@
 .active-btn {
-	color: #fff !important;
+	color: var(--accent-clr);
 }
 
 .inactive-btn {
 	color: rgba(255, 255, 255, 0.5);
+
+	&:hover {
+		color: var(--accent-clr);
+	}
 }

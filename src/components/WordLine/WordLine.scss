@@ -6,6 +6,7 @@
 .word-line {
 	transform: translateY(100%);
 	transition: transform 1s;
+	margin-right: 0.25em;
 }
 
 .word-line--active {

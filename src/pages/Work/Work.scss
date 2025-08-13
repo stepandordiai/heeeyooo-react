@@ -4,6 +4,10 @@
 	padding: 20px;
 }
 
+.work__title {
+	margin-bottom: 20px;
+}
+
 .portfolio__btn-container {
 	@include flex-start-center;
 	gap: 5px;
@@ -89,13 +93,13 @@
 	gap: 10px;
 	// background: rgb(50, 50, 50);
 	// padding: 10px;
-	border-radius: 15px;
+	// border-radius: 15px;
 	// opacity: 0;
 	// transform: translateY(15px);
 }
 
 .portfolio__img {
-	border-radius: 10px;
+	border-radius: 15px;
 }
 
 .work__details {

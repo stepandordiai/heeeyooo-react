@@ -3,8 +3,8 @@
 	"about_title": "About",
 	"work_title": "Work",
 	"contacts_title": "Contacts",
-	"recent_work_title": "Recent work",
-	"recent_work_desc": "A selection of past and ongoing projects. Some wer built for clients, others for ourselves - from early experiments to full-scale systems, our work spans disciplines and formats.",
+	"featured_work_title": "Featured work",
+	"featured_work_desc": "Explore our featured projects to see how we’ve helped businesses improve their online presence, boost engagement, and achieve their goals through innovative digital solutions. Some projects were built for clients, others for ourselves",
 
 	"jan": "January",
 	"feb": "February",
@@ -31,7 +31,7 @@
 	"services": {
 		"title": "Services",
 		"desc": "We specialize in crafting websites from idea, through design to development and post-deployment follow-up support.",
-		"service_title1": "Web Design",
+		"service_title1": "UX/UI Design",
 		"service_title2": "Web Development",
 		"service_title3": "Hosting",
 		"service_title4": "Website Maintenance",

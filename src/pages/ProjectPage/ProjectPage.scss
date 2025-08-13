@@ -1,6 +1,19 @@
+.page-nav__link {
+	color: hsl(0, 0%, 50%);
+
+	&:hover {
+		color: var(--accent-clr);
+	}
+}
+
+.project-page {
+	padding: 20px;
+}
+
 .project-page__title {
 	font-size: 2rem;
 	color: #fff;
+	margin-bottom: 20px;
 }
 
 .project-page__img {
@@ -13,5 +26,11 @@
 	to {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@media screen and (width < 808px) {
+	.project-page {
+		padding: 10px;
 	}
 }

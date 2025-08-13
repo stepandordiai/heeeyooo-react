@@ -5,7 +5,8 @@
 }
 
 .home__top {
-	height: 100svh;
+	position: relative;
+	min-height: 100svh;
 }
 
 h1 {
@@ -20,11 +21,13 @@ h2 {
 	margin-top: 20px;
 	font-size: clamp(3rem, 4vw, 4rem);
 	color: hsl(0, 0%, 50%);
+	max-width: 700px;
 }
 
-.home__sec-title {
-	font-size: clamp(1.2rem, 4vw, 2rem) !important;
+.home__desc {
+	font-size: clamp(1.2rem, 4vw, 1.6rem) !important;
 	color: #fff !important;
+	max-width: 800px;
 }
 
 .construction {
