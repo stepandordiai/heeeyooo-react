@@ -16,7 +16,7 @@ const Work = ({ workData }) => {
 	}
 
 	useEffect(() => {
-		const work = document.querySelectorAll(".work");
+		const work = document.querySelectorAll(".project");
 		let element = null;
 
 		work.forEach((project, index) => {
@@ -114,13 +114,21 @@ const Work = ({ workData }) => {
 				</div>
 				<div className="portfolio__btn-container">
 					<button
-						className={layout === "works__list" && "portfolio__btn--active"}
+						className={
+							layout === "works__list"
+								? "portfolio__btn portfolio__btn--active"
+								: "portfolio__btn"
+						}
 						onClick={() => handleLayout("works__list")}
 					>
 						<span>List</span>
 					</button>
 					<button
-						className={layout === "works__grid" && "portfolio__btn--active"}
+						className={
+							layout === "works__grid"
+								? "portfolio__btn portfolio__btn--active"
+								: "portfolio__btn"
+						}
 						onClick={() => handleLayout("works__grid")}
 					>
 						<span>Grid</span>

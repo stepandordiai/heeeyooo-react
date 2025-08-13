@@ -5,6 +5,7 @@ import Technologies from "../../components/Technologies/Technologies";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./Home.scss";
+import Services from "../../components/Services/Services";
 
 const Home = ({ workData }) => {
 	const { t } = useTranslation();
@@ -66,30 +67,30 @@ const Home = ({ workData }) => {
 		});
 	});
 
-	useEffect(() => {
-		document.addEventListener("scroll", () => {
-			const scrollTop = document.documentElement.scrollTop;
-			const documentHeight = document.documentElement.scrollHeight;
-			const windowHeight = document.documentElement.clientHeight;
-			const calcHeight = documentHeight - windowHeight;
+	// useEffect(() => {
+	// 	document.addEventListener("scroll", () => {
+	// 		const scrollTop = document.documentElement.scrollTop;
+	// 		const documentHeight = document.documentElement.scrollHeight;
+	// 		const windowHeight = document.documentElement.clientHeight;
+	// 		const calcHeight = documentHeight - windowHeight;
 
-			const percentagePos = Math.min((scrollTop * 100) / calcHeight, 100);
+	// 		const percentagePos = Math.min((scrollTop * 100) / calcHeight, 100);
 
-			if (scrollTop > windowHeight) {
-				document
-					.querySelector(".scroll-line")
-					.classList.add("scroll-line--active");
-			} else {
-				document
-					.querySelector(".scroll-line")
-					.classList.remove("scroll-line--active");
-			}
+	// 		if (scrollTop > windowHeight) {
+	// 			document
+	// 				.querySelector(".scroll-line")
+	// 				.classList.add("scroll-line--active");
+	// 		} else {
+	// 			document
+	// 				.querySelector(".scroll-line")
+	// 				.classList.remove("scroll-line--active");
+	// 		}
 
-			document.querySelector(
-				".scroll-line-inner"
-			).style.height = `${percentagePos}%`;
-		});
-	}, []);
+	// 		document.querySelector(
+	// 			".scroll-line-inner"
+	// 		).style.height = `${percentagePos}%`;
+	// 	});
+	// }, []);
 
 	// function handleScrollToTop() {
 	// 	window.scrollTo({
@@ -131,33 +132,7 @@ const Home = ({ workData }) => {
 						);
 					})}
 				</div>
-				<h2 style={{ marginTop: 100, fontSize: "1.5rem", fontWeight: 500 }}>
-					Services
-				</h2>
-				<p>
-					We specialize in crafting websites from idea, through design to
-					development and post-deployment follow-up support.
-				</p>
-				<div className="home__services-grid">
-					<div className="home__service">
-						<p>Strategy</p>
-					</div>
-					<div className="home__service">
-						<p>Design</p>
-					</div>
-					<div className="home__service">
-						<p>Hosting</p>
-					</div>
-					<div className="home__service">
-						<p>Development</p>
-					</div>
-					<div className="home__service">
-						<p>Website Maintenance</p>
-					</div>
-					<div className="home__service">
-						<p>SEO</p>
-					</div>
-				</div>
+				<Services />
 				<Technologies />
 				<h2>Our process</h2>
 				<p>Efficient, Transparent, and Custom-Tailored</p>

@@ -1,0 +1,13 @@
+.word-line-wrapper {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.word-line {
+	transform: translateY(100%);
+	transition: transform 1s;
+}
+
+.word-line--active {
+	transform: translateY(0);
+}

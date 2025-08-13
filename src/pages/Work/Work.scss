@@ -12,16 +12,16 @@
 	border-radius: 15px;
 	padding: 5px;
 	margin: 20px 0;
+}
 
-	button {
-		padding: 5px;
-		min-width: 50px;
-		border-radius: 10px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 5px;
-	}
+.portfolio__btn {
+	padding: 5px;
+	min-width: 50px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
 }
 
 .portfolio__btn--active {
