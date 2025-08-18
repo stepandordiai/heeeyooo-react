@@ -1,5 +1,12 @@
 [
 	{
+		"id": "web-envelope",
+		"name": "Web Envelope",
+		"date": "August | 2025",
+		"img": "/work-2560/web-envelope-ss-2560-v1-c.png",
+		"siteUrl": "https://web-envelope.netlify.app/"
+	},
+	{
 		"id": "yolk",
 		"name": "Yolk",
 		"date": "July | 2025",
