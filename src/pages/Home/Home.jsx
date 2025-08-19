@@ -133,7 +133,7 @@ const Home = ({ workData }) => {
 									// href={project.siteUrl}
 									// target="_blank"
 								>
-									<img className="home__work-img" src={project.img} alt="" />
+									<img className="home__work-img" src={project.img[0]} alt="" />
 									<div className="home__work-details">
 										<p className="home__work-name">{project.name}</p>
 										<p className="home__work-date">{project.date}</p>

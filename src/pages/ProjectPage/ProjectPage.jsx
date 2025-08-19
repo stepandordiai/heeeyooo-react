@@ -19,20 +19,35 @@ const ProjectPage = ({ workData }) => {
 
 	useEffect(() => {
 		// TODO:
-		const wrapper = document.querySelector(".project-page__img-wrapper");
-		if (!wrapper) return;
+		const wrappers = document.querySelectorAll(".wrr");
 
-		// reset animation
-		wrapper.style.animation = "none";
+		const wrappersImg = document.querySelectorAll(".project-page__img-wrapper");
 
-		// force reflow to restart animation
-		// eslint-disable-next-line no-unused-expressions
-		wrapper.offsetHeight;
+		wrappers.forEach((wrapper, index) => {
+			// if (!wrapper) return;
 
-		// apply animation again
-		wrapper.style.animation =
-			"revealWrapper 2s forwards cubic-bezier(0.75, 0.5, 0.25, 1)";
-	}, [pathname]); // run every time pathname changes
+			// reset animation
+			// wrapper.style.animation = "none";
+
+			// force reflow to restart animation
+			// eslint-disable-next-line no-unused-expressions
+			// wrapper.offsetHeight;
+			const wrapperRect = wrapper.getBoundingClientRect();
+
+			document.addEventListener("scroll", () => {
+				const wrapperRect = wrapper.getBoundingClientRect();
+				if (wrapperRect.top < window.innerHeight - wrapperRect.top / 2) {
+					// apply animation again
+					wrappersImg[index].classList.add("project-page__img-wrapper--active");
+				}
+			});
+
+			if (wrapperRect.top < window.innerHeight - wrapperRect.top / 2) {
+				// apply animation again
+				wrappersImg[index].classList.add("project-page__img-wrapper--active");
+			}
+		});
+	}, []); // run every time pathname changes
 	return (
 		<>
 			<Helmet>
@@ -46,9 +61,23 @@ const ProjectPage = ({ workData }) => {
 					&bull; <span style={{ color: "hsl(0, 0%, 50%)" }}>Project</span>
 				</div>
 				<h2 className="project-page__title">{project.name}</h2>
-				<div className="project-page__img-wrapper">
-					<img className="project-page__img" src={project.img} alt="" />
+				<div className="img-flex">
+					{project.img.map((img, index) => {
+						return (
+							<div className="wrr">
+								<div key={index} className="project-page__img-wrapper">
+									<img
+										className="project-page__img"
+										src={img}
+										alt=""
+										loading="lazy"
+									/>
+								</div>
+							</div>
+						);
+					})}
 				</div>
+
 				<a href={project.siteUrl} target="_blank">
 					Live site
 				</a>

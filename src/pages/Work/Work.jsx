@@ -180,7 +180,7 @@ const Work = ({ workData }) => {
 									// href={project.siteUrl}
 									// target="_blank"
 								>
-									<img className="portfolio__img" src={project.img} alt="" />
+									<img className="portfolio__img" src={project.img[0]} alt="" />
 									<div className="work__details-grid">
 										<p className="work__name">{project.name}</p>
 										<img width={20} height={20} src={arrowIcon} alt="" />
