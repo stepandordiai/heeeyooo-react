@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import Technologies from "../../components/Technologies/Technologies";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Services from "../../components/Services/Services";
 import WordLine from "../../components/WordLine/WordLine";
-import logo from "/heeeyooo-studio-logo-white-v1.svg";
+// import logo from "/heeeyooo-studio-logo-white-v1.svg";
 import "./Home.scss";
 
 const Home = ({ workData }) => {
@@ -14,60 +14,60 @@ const Home = ({ workData }) => {
 
 	const { lng } = useParams();
 
-	function isTouchDevice() {
-		try {
-			document.createEvent("TouchEvent");
-			return true;
-		} catch (error) {
-			return false;
-		}
-	}
+	// function isTouchDevice() {
+	// 	try {
+	// 		document.createEvent("TouchEvent");
+	// 		return true;
+	// 	} catch (error) {
+	// 		return false;
+	// 	}
+	// }
 
 	// TODO: I learned new nice animation with position and scale
-	useEffect(() => {
-		const portfolio = document.querySelectorAll(".rect-animate");
+	// useEffect(() => {
+	// 	const portfolio = document.querySelectorAll(".rect-animate");
 
-		portfolio.forEach((creatorLink, index) => {
-			const bgElement = document.createElement("div");
+	// 	portfolio.forEach((creatorLink, index) => {
+	// 		const bgElement = document.createElement("div");
 
-			creatorLink.appendChild(bgElement);
+	// 		creatorLink.appendChild(bgElement);
 
-			bgElement.classList.add("bg-element");
+	// 		bgElement.classList.add("bg-element");
 
-			let mouseX;
-			let mouseY;
+	// 		let mouseX;
+	// 		let mouseY;
 
-			creatorLink.addEventListener("mouseover", (e) => {
-				const rect = creatorLink.getBoundingClientRect();
-				mouseX =
-					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
-				mouseY =
-					(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
-				bgElement.style.top = mouseY + "px";
-				bgElement.style.left = mouseX + "px";
-				bgElement.classList.add("bg-element--active");
-			});
+	// 		creatorLink.addEventListener("mouseover", (e) => {
+	// 			const rect = creatorLink.getBoundingClientRect();
+	// 			mouseX =
+	// 				(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
+	// 			mouseY =
+	// 				(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
+	// 			bgElement.style.top = mouseY + "px";
+	// 			bgElement.style.left = mouseX + "px";
+	// 			bgElement.classList.add("bg-element--active");
+	// 		});
 
-			creatorLink.addEventListener("touchstart", (e) => {
-				const rect = creatorLink.getBoundingClientRect();
-				mouseX =
-					(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
-				mouseY =
-					(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
-				bgElement.style.top = mouseY + "px";
-				bgElement.style.left = mouseX + "px";
-				bgElement.classList.add("bg-element--active");
-			});
+	// 		creatorLink.addEventListener("touchstart", (e) => {
+	// 			const rect = creatorLink.getBoundingClientRect();
+	// 			mouseX =
+	// 				(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
+	// 			mouseY =
+	// 				(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
+	// 			bgElement.style.top = mouseY + "px";
+	// 			bgElement.style.left = mouseX + "px";
+	// 			bgElement.classList.add("bg-element--active");
+	// 		});
 
-			creatorLink.addEventListener("mouseleave", () => {
-				bgElement.classList.remove("bg-element--active");
-			});
+	// 		creatorLink.addEventListener("mouseleave", () => {
+	// 			bgElement.classList.remove("bg-element--active");
+	// 		});
 
-			creatorLink.addEventListener("touchend", () => {
-				bgElement.classList.remove("bg-element--active");
-			});
-		});
-	});
+	// 		creatorLink.addEventListener("touchend", () => {
+	// 			bgElement.classList.remove("bg-element--active");
+	// 		});
+	// 	});
+	// });
 
 	// useEffect(() => {
 	// 	document.addEventListener("scroll", () => {
