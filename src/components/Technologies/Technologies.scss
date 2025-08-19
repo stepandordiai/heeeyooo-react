@@ -31,37 +31,51 @@
 
 	p:nth-of-type(2) {
 		&::after {
-			background: linear-gradient(90deg, #d858fb);
+			background: linear-gradient(90deg, #563d7c, #ffffff);
 		}
 	}
 
 	p:nth-of-type(3) {
 		&::after {
-			background: linear-gradient(90deg, #58d8fb);
+			background: linear-gradient(90deg, #61dbfb);
 		}
 	}
 
 	p:nth-of-type(4) {
 		&::after {
-			background: linear-gradient(90deg, #e490ef);
+			background: linear-gradient(90deg, #cc6699);
 		}
 	}
 
 	p:nth-of-type(5) {
 		&::after {
-			background: linear-gradient(90deg, #364ff7);
+			background: linear-gradient(
+				90deg,
+				#264de4,
+				#2965f1,
+				#ebebeb,
+				#ffffff,
+				#000000
+			);
 		}
 	}
 
 	p:nth-of-type(6) {
 		&::after {
-			background: linear-gradient(90deg, #f79336);
+			background: linear-gradient(
+				90deg,
+				#000000,
+				#e34c26,
+				#f06529,
+				#ebebeb,
+				#ffffff
+			);
 		}
 	}
 
 	p:nth-of-type(7) {
 		&::after {
-			background: linear-gradient(90deg, #209018);
+			background: linear-gradient(90deg, #303030, #68a063, #3c873a);
 		}
 	}
 
@@ -73,50 +87,73 @@
 
 	p:nth-of-type(9) {
 		&::after {
-			background: linear-gradient(90deg, #ffe734);
+			background: linear-gradient(90deg, #f0db4f, #323330);
 		}
 	}
 
 	p:nth-of-type(10) {
 		&::after {
-			background: linear-gradient(90deg, #5092f6);
+			background: linear-gradient(90deg, #007acc, #fff);
 		}
 	}
 
 	p:nth-of-type(11) {
 		&::after {
-			background: linear-gradient(90deg, #33c719);
+			background: linear-gradient(
+				90deg,
+				#4b8bbe,
+				#306998,
+				#ffe873,
+				#ffd43b,
+				#646464
+			);
 		}
 	}
 
 	p:nth-of-type(12) {
 		&::after {
-			background: linear-gradient(90deg, #3db435, #995f0d);
+			background: linear-gradient(
+				90deg,
+				#4db33d,
+				#3fa037,
+				#e8e7d5,
+				#3f3e42,
+				#c1bebc
+			);
 		}
 	}
 
+	// OK
 	p:nth-of-type(13) {
 		&::after {
 			background: linear-gradient(
 				90deg,
-				#ff5107,
-				#eb9926,
-				#953f98,
-				#498ff8,
-				#3dcd49
+				#f24e1e,
+				#ff7262,
+				#a259ff,
+				#1abcfe,
+				#0acf83
 			);
 		}
 	}
 
 	p:nth-of-type(14) {
 		&::after {
-			background: linear-gradient(90deg, #000000, #ffffff);
+			background: linear-gradient(
+				90deg,
+				#211f1f,
+				#f4cbb2,
+				#ad5c51,
+				#ffffff,
+				#9cdaf1,
+				#7dbbe6
+			);
 		}
 	}
 
 	p:nth-of-type(15) {
 		&::after {
-			background: linear-gradient(90deg, #f36e31, #ffffff);
+			background: linear-gradient(90deg, #f1502f, #3e2c00);
 		}
 	}
 }
