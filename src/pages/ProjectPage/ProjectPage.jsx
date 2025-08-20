@@ -82,7 +82,7 @@ const ProjectPage = ({ workData }) => {
 			},
 			// if part of element is in view it fires immediately
 			{
-				threshold: 0.5,
+				threshold: 0,
 			}
 		);
 
