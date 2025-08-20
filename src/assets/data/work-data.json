@@ -10,7 +10,13 @@
 		"id": "yolk",
 		"name": "Yolk",
 		"date": "July | 2025",
-		"img": ["/work-2560/yolk-ss-2560-v1-c.png"],
+		"img": [
+			"/work-2560/yolk-ss-2560-v1-c.png",
+			"/yolk-ss-2560-1-c.png",
+			"/yolk-ss-2560-2-c.png",
+			"/yolk-ss-2560-3-c.png",
+			"/yolk-ss-2560-4-c.png"
+		],
 		"siteUrl": "https://yolk-project.netlify.app/",
 		"isFeatured": true
 	},

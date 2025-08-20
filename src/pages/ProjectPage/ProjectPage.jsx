@@ -17,42 +17,84 @@ const ProjectPage = ({ workData }) => {
 	const nexProjectIndex =
 		currentProjectIndex < workData.length - 1 ? currentProjectIndex + 1 : 0;
 
-	useEffect(() => {
-		const wrappers = Array.from(document.querySelectorAll(".wrr"));
-		const wrappersImg = Array.from(
-			document.querySelectorAll(".project-page__img-wrapper")
-		);
+	// useEffect(() => {
+	// 	const wrappers = document.querySelectorAll(".wrr");
+	// 	const wrappersImg = document.querySelectorAll(".project-page__img-wrapper");
 
-		// 1. Remove all classes when navigating
+	// 	wrappersImg.forEach((img) =>
+	// 		img.classList.remove("project-page__img-wrapper--active")
+	// 	);
+
+	// 	const handleScroll = () => {
+	// 		wrappers.forEach((wrapper, index) => {
+	// 			const rect = wrapper.getBoundingClientRect();
+
+	// 			if (rect.top < window.innerHeight) {
+	// 				wrappersImg[index].classList.add("project-page__img-wrapper--active");
+	// 			}
+	// 		});
+	// 	};
+
+	// 	setTimeout(() => {
+	// 		handleScroll();
+	// 	}, 50);
+
+	// 	setTimeout(() => {
+	// 		window.addEventListener("scroll", handleScroll, { passive: true });
+	// 	}, 50);
+
+	// 	return () => {
+	// 		window.removeEventListener("scroll", handleScroll);
+	// 	};
+	// }, [pathname]);
+
+	useEffect(() => {
+		// const wrappers = document.querySelectorAll(".project-page__img-wrapper");
+		const wrappersImg = document.querySelectorAll(".project-page__img");
+
+		// remove all classes initially
 		wrappersImg.forEach((img) =>
 			img.classList.remove("project-page__img-wrapper--active")
 		);
 
-		// 2. Scroll handler
-		const handleScroll = () => {
-			wrappers.forEach((wrapper, index) => {
-				const rect = wrapper.getBoundingClientRect();
-				if (rect.top < window.innerHeight) {
-					wrappersImg[index].classList.add("project-page__img-wrapper--active");
-				}
-			});
-		};
+		// TODO:
+		// create observer
+		// const observer = new IntersectionObserver(
+		// 	(entries) => {
+		// 		entries.forEach((entry) => {
+		// 			if (entry.isIntersecting) {
+		// 				entry.target.classList.add("project-page__img-wrapper--active");
+		// 			}
+		// 		});
+		// 	},
+		// 	{
+		// 		threshold: 0, // 50% visible triggers
+		// 	}
+		// );
 
-		// 3. Run once immediately (in case some elements are already in view)
-		// handleScroll();
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("project-page__img-wrapper--active");
+					}
+				});
+			},
+			// if part of element is in view it fires immediately
+			{
+				threshold: 0.5,
+			}
+		);
 
-		// setTimeout(() => {
-		handleScroll();
-		// }, 500);
+		// observe each wrapper image
+		wrappersImg.forEach((img) => observer.observe(img));
 
-		// 4. Attach listener
-		window.addEventListener("scroll", handleScroll, { passive: true });
-
-		// 5. Cleanup on unmount / navigation
 		return () => {
-			window.removeEventListener("scroll", handleScroll);
+			// cleanup observer
+			wrappersImg.forEach((img) => observer.unobserve(img));
 		};
 	}, [pathname]);
+
 	return (
 		<>
 			<Helmet>
@@ -69,16 +111,15 @@ const ProjectPage = ({ workData }) => {
 				<div className="img-flex">
 					{project.img.map((img, index) => {
 						return (
-							<div className="wrr">
-								<div key={index} className="project-page__img-wrapper">
-									<img
-										className="project-page__img"
-										src={img}
-										alt=""
-										loading="lazy"
-									/>
-								</div>
-							</div>
+							// <div key={index} className="project-page__img-wrapper">
+							<img
+								key={index}
+								className="project-page__img"
+								src={img}
+								alt=""
+								loading="lazy"
+							/>
+							// </div>
 						);
 					})}
 				</div>
