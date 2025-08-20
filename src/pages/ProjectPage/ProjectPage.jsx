@@ -58,25 +58,13 @@ const ProjectPage = ({ workData }) => {
 		);
 
 		// TODO:
-		// create observer
-		// const observer = new IntersectionObserver(
-		// 	(entries) => {
-		// 		entries.forEach((entry) => {
-		// 			if (entry.isIntersecting) {
-		// 				entry.target.classList.add("project-page__img-wrapper--active");
-		// 			}
-		// 		});
-		// 	},
-		// 	{
-		// 		threshold: 0, // 50% visible triggers
-		// 	}
-		// );
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						entry.target.classList.add("project-page__img-wrapper--active");
+						const img = entry.target;
+
+						img.classList.add("project-page__img-wrapper--active");
 					}
 				});
 			},
