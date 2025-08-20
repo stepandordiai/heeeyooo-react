@@ -18,36 +18,41 @@ const ProjectPage = ({ workData }) => {
 		currentProjectIndex < workData.length - 1 ? currentProjectIndex + 1 : 0;
 
 	useEffect(() => {
-		// TODO:
-		const wrappers = document.querySelectorAll(".wrr");
+		const wrappers = Array.from(document.querySelectorAll(".wrr"));
+		const wrappersImg = Array.from(
+			document.querySelectorAll(".project-page__img-wrapper")
+		);
 
-		const wrappersImg = document.querySelectorAll(".project-page__img-wrapper");
+		// 1. Remove all classes when navigating
+		wrappersImg.forEach((img) =>
+			img.classList.remove("project-page__img-wrapper--active")
+		);
 
-		wrappers.forEach((wrapper, index) => {
-			// if (!wrapper) return;
-
-			// reset animation
-			// wrapper.style.animation = "none";
-
-			// force reflow to restart animation
-			// eslint-disable-next-line no-unused-expressions
-			// wrapper.offsetHeight;
-			const wrapperRect = wrapper.getBoundingClientRect();
-
-			document.addEventListener("scroll", () => {
-				const wrapperRect = wrapper.getBoundingClientRect();
-				if (wrapperRect.top < window.innerHeight - wrapperRect.top / 2) {
-					// apply animation again
+		// 2. Scroll handler
+		const handleScroll = () => {
+			wrappers.forEach((wrapper, index) => {
+				const rect = wrapper.getBoundingClientRect();
+				if (rect.top < window.innerHeight) {
 					wrappersImg[index].classList.add("project-page__img-wrapper--active");
 				}
 			});
+		};
 
-			if (wrapperRect.top < window.innerHeight - wrapperRect.top / 2) {
-				// apply animation again
-				wrappersImg[index].classList.add("project-page__img-wrapper--active");
-			}
-		});
-	}, []); // run every time pathname changes
+		// 3. Run once immediately (in case some elements are already in view)
+		// handleScroll();
+
+		// setTimeout(() => {
+		handleScroll();
+		// }, 500);
+
+		// 4. Attach listener
+		window.addEventListener("scroll", handleScroll, { passive: true });
+
+		// 5. Cleanup on unmount / navigation
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [pathname]);
 	return (
 		<>
 			<Helmet>
