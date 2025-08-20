@@ -34,12 +34,12 @@ const Work = ({ workData }) => {
 					element = document.createElement("img");
 					element.classList.add("img-element");
 					project.appendChild(element);
-					element.src = workData[index].img;
+					element.src = workData[index].img[0];
 				}
 
 				// Update the image src only if the index changes or it's a new element
-				if (element && element.src !== workData[index].img) {
-					element.src = workData[index].img;
+				if (element && element.src !== workData[index].img[0]) {
+					element.src = workData[index].img[0];
 				}
 
 				// Calculate mouse position relative to the project element
