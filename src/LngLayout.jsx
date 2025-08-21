@@ -12,6 +12,7 @@ import workData from "./assets/data/work-data.json";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import ProjectPage from "./pages/ProjectPage/ProjectPage";
+import CustomCursor from "./components/CustomCursor/CustomCursor";
 
 const LngLayout = () => {
 	const { lng } = useParams();
@@ -23,6 +24,7 @@ const LngLayout = () => {
 	}, [lng]);
 	return (
 		<>
+			<CustomCursor />
 			<Header workData={workData} />
 			<Routes>
 				<Route path="/" element={<Home workData={workData} />} />

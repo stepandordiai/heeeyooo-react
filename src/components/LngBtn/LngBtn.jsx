@@ -31,19 +31,22 @@ const LngBtn = () => {
 	return (
 		<>
 			<div>
-				<button
-					className={lng === "en" ? "active-btn" : "inactive-btn"}
-					onClick={() => handleLngBtn("en")}
-				>
-					EN
-				</button>
-				<span> &bull; </span>
-				<button
-					className={lng === "uk" ? "active-btn" : "inactive-btn"}
-					onClick={() => handleLngBtn("uk")}
-				>
-					UA
-				</button>
+				{lng === "en" ? (
+					<button
+						className={lng === "uk" ? "active-btn" : "inactive-btn"}
+						onClick={() => handleLngBtn("uk")}
+					>
+						UA
+					</button>
+				) : (
+					<button
+						className={lng === "en" ? "active-btn" : "inactive-btn"}
+						onClick={() => handleLngBtn("en")}
+					>
+						EN
+					</button>
+				)}
+				{/* <span> &bull; </span> */}
 			</div>
 		</>
 	);

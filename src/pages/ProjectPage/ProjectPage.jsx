@@ -99,25 +99,31 @@ const ProjectPage = ({ workData }) => {
 				<div className="img-flex">
 					{project.img.map((img, index) => {
 						return (
-							// <div key={index} className="project-page__img-wrapper">
 							<img
 								key={index}
 								className="project-page__img"
 								src={img}
-								alt=""
+								alt={project.name}
 								loading="lazy"
 							/>
-							// </div>
 						);
 					})}
 				</div>
-
-				<a href={project.siteUrl} target="_blank">
-					Live site
-				</a>
-				<NavLink to={`/${lng}/project-page/${workData[nexProjectIndex].id}`}>
-					Next Project
-				</NavLink>
+				<div style={{ display: "flex", justifyContent: "space-between" }}>
+					<a
+						className="project-page__link"
+						href={project.siteUrl}
+						target="_blank"
+					>
+						Live site
+					</a>
+					<NavLink
+						className="project-page__link"
+						to={`/${lng}/project-page/${workData[nexProjectIndex].id}`}
+					>
+						Next Project
+					</NavLink>
+				</div>
 			</main>
 		</>
 	);

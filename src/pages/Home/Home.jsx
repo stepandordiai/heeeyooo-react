@@ -1,12 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
-// import { useEffect } from "react";
 import Technologies from "../../components/Technologies/Technologies";
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Services from "../../components/Services/Services";
 import WordLine from "../../components/WordLine/WordLine";
-// import logo from "/heeeyooo-studio-logo-white-v1.svg";
 import "./Home.scss";
 
 const Home = ({ workData }) => {
@@ -14,92 +12,6 @@ const Home = ({ workData }) => {
 
 	const { lng } = useParams();
 
-	// function isTouchDevice() {
-	// 	try {
-	// 		document.createEvent("TouchEvent");
-	// 		return true;
-	// 	} catch (error) {
-	// 		return false;
-	// 	}
-	// }
-
-	// TODO: I learned new nice animation with position and scale
-	// useEffect(() => {
-	// 	const portfolio = document.querySelectorAll(".rect-animate");
-
-	// 	portfolio.forEach((creatorLink, index) => {
-	// 		const bgElement = document.createElement("div");
-
-	// 		creatorLink.appendChild(bgElement);
-
-	// 		bgElement.classList.add("bg-element");
-
-	// 		let mouseX;
-	// 		let mouseY;
-
-	// 		creatorLink.addEventListener("mouseover", (e) => {
-	// 			const rect = creatorLink.getBoundingClientRect();
-	// 			mouseX =
-	// 				(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
-	// 			mouseY =
-	// 				(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
-	// 			bgElement.style.top = mouseY + "px";
-	// 			bgElement.style.left = mouseX + "px";
-	// 			bgElement.classList.add("bg-element--active");
-	// 		});
-
-	// 		creatorLink.addEventListener("touchstart", (e) => {
-	// 			const rect = creatorLink.getBoundingClientRect();
-	// 			mouseX =
-	// 				(!isTouchDevice() ? e.clientX : e.touches[0].clientX) - rect.left;
-	// 			mouseY =
-	// 				(!isTouchDevice() ? e.clientY : e.touches[0].clientY) - rect.top;
-	// 			bgElement.style.top = mouseY + "px";
-	// 			bgElement.style.left = mouseX + "px";
-	// 			bgElement.classList.add("bg-element--active");
-	// 		});
-
-	// 		creatorLink.addEventListener("mouseleave", () => {
-	// 			bgElement.classList.remove("bg-element--active");
-	// 		});
-
-	// 		creatorLink.addEventListener("touchend", () => {
-	// 			bgElement.classList.remove("bg-element--active");
-	// 		});
-	// 	});
-	// });
-
-	// useEffect(() => {
-	// 	document.addEventListener("scroll", () => {
-	// 		const scrollTop = document.documentElement.scrollTop;
-	// 		const documentHeight = document.documentElement.scrollHeight;
-	// 		const windowHeight = document.documentElement.clientHeight;
-	// 		const calcHeight = documentHeight - windowHeight;
-
-	// 		const percentagePos = Math.min((scrollTop * 100) / calcHeight, 100);
-
-	// 		if (scrollTop > windowHeight) {
-	// 			document
-	// 				.querySelector(".scroll-line")
-	// 				.classList.add("scroll-line--active");
-	// 		} else {
-	// 			document
-	// 				.querySelector(".scroll-line")
-	// 				.classList.remove("scroll-line--active");
-	// 		}
-
-	// 		document.querySelector(
-	// 			".scroll-line-inner"
-	// 		).style.height = `${percentagePos}%`;
-	// 	});
-	// }, []);
-
-	// function handleScrollToTop() {
-	// 	window.scrollTo({
-	// 		top: 0,
-	// 		behavior: "smooth",
-	// 	});
-	// }
 	return (
 		<>
 			<Helmet>
@@ -108,6 +20,9 @@ const Home = ({ workData }) => {
 			</Helmet>
 			<main className="home">
 				<div className="home__top">
+					<p style={{ textAlign: "center", color: "var(--accent-clr)" }}>
+						<WordLine>{t("website_under_construction")}</WordLine>
+					</p>
 					<h1 className="home__title">
 						<WordLine>{t("home.title")}</WordLine>
 					</h1>
@@ -127,11 +42,10 @@ const Home = ({ workData }) => {
 						.map((project) => {
 							return (
 								<NavLink
+									data-cursor-text="See more"
 									key={project.id}
 									className="home__work rect-animate"
 									to={`/${lng}/project-page/${project.id}`}
-									// href={project.siteUrl}
-									// target="_blank"
 								>
 									<img className="home__work-img" src={project.img[0]} alt="" />
 									<div className="home__work-details">
@@ -184,9 +98,7 @@ const Home = ({ workData }) => {
 						</p>
 					</div>
 				</div>
-				{/* <div onClick={handleScrollToTop} className="scroll-line">
-				<div className="scroll-line-inner"></div>
-			</div> */}
+				;
 			</main>
 		</>
 	);

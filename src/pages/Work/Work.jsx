@@ -121,7 +121,7 @@ const Work = ({ workData }) => {
 						All works <span>{workData.length}</span>
 					</p>
 				</div>
-				<div className="portfolio__btn-container">
+				<div className="portfolio__btn-container" data-cursor-inactive>
 					<button
 						className={
 							layout === "works__list"
@@ -149,6 +149,7 @@ const Work = ({ workData }) => {
 							return (
 								<NavLink
 									key={project.id}
+									data-cursor-inactive
 									className="project"
 									to={`/${lng}/project-page/${project.id}`}
 									// href={project.siteUrl}
@@ -180,7 +181,12 @@ const Work = ({ workData }) => {
 									// href={project.siteUrl}
 									// target="_blank"
 								>
-									<img className="portfolio__img" src={project.img[0]} alt="" />
+									<img
+										className="portfolio__img"
+										src={project.img[0]}
+										alt={project.name}
+										loading="lazy"
+									/>
 									<div className="work__details-grid">
 										<p className="work__name">{project.name}</p>
 										<img width={20} height={20} src={arrowIcon} alt="" />

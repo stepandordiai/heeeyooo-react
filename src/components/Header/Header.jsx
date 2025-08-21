@@ -7,6 +7,7 @@ import logoImg from "/heeeyooo-studio-logo-white-v1.svg";
 import { useParams } from "react-router-dom";
 import workData from "./../../assets/data/work-data.json";
 import "./Header.scss";
+import LngBtn from "../LngBtn/LngBtn";
 
 const Header = () => {
 	const { t } = useTranslation();
@@ -95,7 +96,19 @@ const Header = () => {
 						{t("contacts_title")}
 					</NavLink>
 				</nav>
-				<BurgerBtn />
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+						columnGap: 10,
+					}}
+				>
+					<div className="header__lng-btn-wrapper">
+						<LngBtn />
+					</div>
+					<BurgerBtn />
+				</div>
 			</div>
 			<BurgerMenu workData={workData} />
 		</header>
