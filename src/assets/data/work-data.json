@@ -11,8 +11,8 @@
 		"name": "Yolk",
 		"date": "July | 2025",
 		"img": [
-			"/work-2560/yolk-ss-2560-v1-c.png",
 			"/yolk-ss-2560-1-c.png",
+			"/work-2560/yolk-ss-2560-v1-c.png",
 			"/yolk-ss-2560-2-c.png",
 			"/yolk-ss-2560-3-c.png",
 			"/yolk-ss-2560-4-c.png"
@@ -31,7 +31,7 @@
 		"id": "shelfy",
 		"name": "Shelfy",
 		"date": "June | 2025",
-		"img": ["/work-2560/shelfy-ss-2560-v1-c.png"],
+		"img": ["/shelfy-ss-2560-2-c.png", "/shelfy-ss-2560-1-c.png"],
 		"siteUrl": "https://shelfy-project.netlify.app/",
 		"isFeatured": true
 	},
@@ -46,7 +46,13 @@
 		"id": "flovas",
 		"name": "flovas",
 		"date": "April | 2025",
-		"img": ["/work-2560/flovas-ss-2560-v1-c.png"],
+		"img": [
+			"/work-2560/flovas-ss-2560-v1-c.png",
+			"/flovas-ss-2560-1-c.png",
+			"/flovas-ss-2560-2-c.png",
+			"/flovas-ss-2560-3-c.png",
+			"/flovas-ss-2560-4-c.png"
+		],
 		"siteUrl": "https://flovas.cz/",
 		"isFeatured": true
 	},
@@ -90,7 +96,11 @@
 		"id": "heeeyooo-studio",
 		"name": "heeeyooo studio",
 		"date": "April | 2025",
-		"img": ["/work-2560/heeeyooo-studio-ss-2560-v1-c.png"],
+		"img": [
+			"/heeeyooo-studio-ss-2560-2-c.png",
+			"/heeeyooo-studio-ss-2560-1-c.png",
+			"/heeeyooo-studio-ss-2560-3-c.png"
+		],
 		"siteUrl": "https://heeeyooo.studio/",
 		"isFeatured": true
 	},
