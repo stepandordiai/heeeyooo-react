@@ -58,12 +58,12 @@ const ProjectPage = ({ workData }) => {
 		);
 
 		// TODO:
+
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						const img = entry.target;
-
 						img.classList.add("project-page__img-wrapper--active");
 					}
 				});
@@ -99,13 +99,19 @@ const ProjectPage = ({ workData }) => {
 				<div className="img-flex">
 					{project.img.map((img, index) => {
 						return (
-							<img
-								key={index}
-								className="project-page__img"
-								src={img}
-								alt={project.name}
-								loading="lazy"
-							/>
+							<div className="project-page__img-wrapper">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<img
+									key={index}
+									className="project-page__img"
+									src={img}
+									alt={project.name}
+									loading="lazy"
+								/>
+							</div>
 						);
 					})}
 				</div>

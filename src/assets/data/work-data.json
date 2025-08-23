@@ -109,11 +109,11 @@
 		"name": "Yagoda Karpat",
 		"date": "January | 2025",
 		"img": [
-			"/work-2560/yagoda-karpat-ss-2560-v1-c.png",
-			"/yagoda-karpat-ss-2560-1-c.png",
-			"/yagoda-karpat-ss-2560-2-c.png",
-			"/yagoda-karpat-ss-2560-3-c.png",
-			"/yagoda-karpat-ss-2560-4-c.png"
+			"/work-2560/yagoda-karpat-ss-2560/yagoda-karpat-ss-2560-1-c.png",
+			"/work-2560/yagoda-karpat-ss-2560/yagoda-karpat-ss-2560-2-c.png",
+			"/work-2560/yagoda-karpat-ss-2560/yagoda-karpat-ss-2560-3-c.png",
+			"/work-2560/yagoda-karpat-ss-2560/yagoda-karpat-ss-2560-4-c.png",
+			"/work-2560/yagoda-karpat-ss-2560/yagoda-karpat-ss-2560-5-c.png"
 		],
 		"siteUrl": "https://yagodakarpat.com/",
 		"isFeatured": true
@@ -129,7 +129,17 @@
 		"id": "stepan-dordiai",
 		"name": "STEPAN DORDIAI",
 		"date": "October | 2024",
-		"img": ["/work-2560/stepan-dordiai-ss-2560-v1-c.png"],
+		"img": [
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-1-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-2-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-3-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-4-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-5-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-6-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-7-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-8-c.png",
+			"/work-2560/stepan-dordiai-ss-2560/stepan-dordiai-ss-2560-9-c.png"
+		],
 		"siteUrl": "https://stepandordiai.netlify.app/"
 	},
 	{

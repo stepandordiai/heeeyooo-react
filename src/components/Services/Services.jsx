@@ -78,6 +78,15 @@ const Services = () => {
 					</div>
 				</div>
 				<div className="service__divider"></div>
+				<div className="service">
+					<div className="service__title">
+						<WordLine>{t("services.service_title6")}</WordLine>
+					</div>
+					<div className="service__desc">
+						<WordLine>{t("services.service_desc6")}</WordLine>
+					</div>
+				</div>
+				<div className="service__divider"></div>
 			</div>
 		</div>
 	);

@@ -98,7 +98,6 @@ const Home = ({ workData }) => {
 						</p>
 					</div>
 				</div>
-				;
 			</main>
 		</>
 	);

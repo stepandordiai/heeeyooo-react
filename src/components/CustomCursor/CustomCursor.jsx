@@ -45,16 +45,30 @@ const CustomCursor = () => {
 			customCursor.current.style.top = y + "px";
 		};
 
+		// const handleMouseLeave = (e) => {
+		// 	const inactiveTarget = e.currentTarget.closest("[data-cursor-inactive]");
+
+		// 	if (inactiveTarget) {
+		// 		// Show cursor again when leaving inactive element
+		// 		customCursor.current.classList.add("custom-cursor--show");
+		// 		// return;
+		// 	} else {
+		// 		customCursor.current.classList.remove("custom-cursor--show");
+		// 	}
+		// };
+
 		const handleMouseLeave = (e) => {
-			const inactiveTarget = e.target.closest("[data-cursor-inactive]");
+			// TODO:
+			const inactiveTarget = e.currentTarget; // the element with data-cursor-inactive
+			const toElement = e.relatedTarget; // where the mouse goes after leaving
 
-			if (inactiveTarget) {
-				// Show cursor again when leaving inactive element
+			if (!inactiveTarget.contains(toElement)) {
+				// mouse left completely, not just moving inside children
+				customCursor.current.classList.remove("custom-cursor--show");
+			} else {
+				// still inside -> keep cursor visible
 				customCursor.current.classList.add("custom-cursor--show");
-				return;
 			}
-
-			customCursor.current.classList.remove("custom-cursor--show");
 		};
 
 		const activeCursor = (e) => {
