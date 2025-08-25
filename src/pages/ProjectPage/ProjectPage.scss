@@ -25,6 +25,23 @@
 	transition: all 2s cubic-bezier(0.75, 0.5, 0.25, 1);
 }
 
+.palette {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.palette__color {
+	position: relative;
+	&::before {
+		content: attr(data-color);
+		position: absolute;
+		mix-blend-mode: difference;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
 .project-page__link {
 	background: var(--accent-clr);
 	padding: 5px;

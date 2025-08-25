@@ -99,13 +99,12 @@ const ProjectPage = ({ workData }) => {
 				<div className="img-flex">
 					{project.img.map((img, index) => {
 						return (
-							<div className="project-page__img-wrapper">
+							<div key={index} className="project-page__img-wrapper">
 								<div></div>
 								<div></div>
 								<div></div>
 								<div></div>
 								<img
-									key={index}
 									className="project-page__img"
 									src={img}
 									alt={project.name}
@@ -115,6 +114,20 @@ const ProjectPage = ({ workData }) => {
 						);
 					})}
 				</div>
+				{project.palette && (
+					<div className="palette">
+						{project.palette.map((color, index) => {
+							return (
+								<div
+									key={index}
+									className="palette__color"
+									style={{ background: color, width: "100%", height: 200 }}
+									data-color={color}
+								></div>
+							);
+						})}
+					</div>
+				)}
 				<div style={{ display: "flex", justifyContent: "space-between" }}>
 					<a
 						className="project-page__link"
